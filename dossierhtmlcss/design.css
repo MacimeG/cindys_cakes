@@ -1,0 +1,819 @@
+/* RESPONSIVE MODE 
+Je Rajoute "!important" car sinon ça ne me prends pas mes propriété et je sais c'est bizarre que sa ne fonctionne pas sans. */
+
+@media screen and (max-width:480px){
+    body{
+        margin: 0 !important;
+    }
+    .navbar{
+        font-size: 18px !important;    
+    }
+    .navbar a {
+        display: none;
+    }
+    .mainLogo{
+        display: block !important;
+        width: 50px !important;
+        margin-right: 85% !important;
+        
+    }
+    .menuNavbar{
+        background-color: #FEEDF3 !important;
+        border: 0px !important;
+        top: 9% !important;
+        position: fixed !important;
+        width: 100% !important;
+        height: 100% !important;
+        font-size: 24px !important;
+        text-align: center !important;
+        display: flex;
+        flex-direction: column;
+        opacity: 0;
+        justify-content: space-around; 
+        transition: all ease-in-out 0.5s;
+        top: -100% !important;
+    }
+    .acc{
+        margin-top: 20% !important;
+    }
+    
+    .menuNavbar a{
+        text-decoration: none !important;
+        color: black !important;
+    }
+    
+    .leMenuouver{
+        opacity: 1;
+        top: 0% !important;
+        transition: all ease-in-out 0.5s;
+    }
+
+    .logoNav{
+        width: 80px !important;
+        left: 38% !important;
+    }
+    .logoPetit{
+        margin-left: 17px !important;
+    }
+    .admin{
+        display: none;
+    }
+    .accueil{
+        background-size: cover !important;
+        padding-top: 14%;
+        width: 100% !important;
+    }
+    .intro{
+        font-size: 40px !important;
+        margin-right: 9% !important;
+        text-align: center !important;
+        width: 87vw !important;
+    }
+    .presentation{
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    .miniNav{
+        height: 5% !important;
+        top: 9% !important;
+    }
+    .mininavCategori{
+        font-size: 24px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-around !important;
+        background-color: #FFFFFF; 
+        border: 0px !important;
+        width: 99% !important;
+        height: 90vh !important;
+        text-align: center !important;
+        opacity: 0 !important;
+        top: -100% !important;
+        position: fixed;
+        transition: all ease-in-out 0.5s;
+    }
+    .catNav{
+        opacity: 1 !important;
+    }
+    .mininavCatouver{
+        opacity: 1 !important;
+        top: 14% !important;
+        transition: all ease-in-out 0.8s !important;
+    }
+    .categorie{
+        display: none;
+    }
+    .toutelesphoto{
+        width: 75% !important;
+        margin-left: 10% !important;
+    }
+    .toutelescartes{
+        padding-top: 25% !important;
+    }
+    .mesprod{
+        margin-left: 13% !important;
+    }
+    .carte ,img{
+        width: 150px !important;
+    }
+    .carte{
+        width: min-content !important;
+    }
+    .like{
+        width: 20px !important;
+    }
+    .commentaire{
+        width: 20px !important;
+    }
+    .espaceCarteSuperHero{
+        width: 85% !important;
+    }
+    .espaceCarteDessinAnime{
+        width: 85% !important;
+    }
+    .espaceCarteJeuxVideo{
+        width: 85% !important;
+    }
+    .espaceCarteFilm{
+        width: 85% !important;
+    }
+    #pageProduit{
+        padding-top: 24% !important;
+    }
+    .icon1{
+        width: 50px !important;
+    }
+    .espacevideo{
+        width: 75% !important;
+        height: max-content !important;
+    }
+    .espacevideo2{
+        width: 75% !important;
+        height: max-content !important;
+    }
+    .espacevideo3{
+        width: 75% !important;
+        height: max-content !important;
+    }
+    .espacevideo4{
+        width: 75% !important;
+        height: max-content !important;
+    }
+    .espacevideo5{
+        width: 75% !important;
+        height: max-content !important;
+    }
+    .espacevideo6{
+        width: 75% !important;
+        height: max-content !important;
+    }
+    .espacevideo7{
+        width: 75% !important;
+        height: max-content !important;
+    }
+    .iconVideo{
+        width: 50px !important;
+    }
+    /* Page contacte */
+    .contacter{
+        padding-top: 15% !important;
+    }
+    .textemsg{
+        width: 80% !important;
+        margin-left: 10% !important;
+    }
+    .formulaire1{
+        font-size: 30px !important;
+    }
+    .formulaire2{
+        font-size: 30px !important;
+    }
+    .formulaire3{
+        font-size: 30px !important;
+    }
+
+    .Nom{
+        width: 25% !important;
+    }
+    .Prenom{
+        width: 26% !important;
+    }
+    .Email{
+        width: 30% !important;
+    }
+    #textar{
+        width:78% !important;
+    }
+}
+
+
+
+
+/* PAGE DACCUEIL */
+@font-face {
+    font-family: "perpetua";
+    src: url("/font/Perpetua-Std_35217.ttf");
+}
+
+body{
+    margin: 0;
+    background: linear-gradient( #F8A5C2, #ffeeee);
+    font-family: "perpetua";
+}
+
+/* NAVBAR */
+.navbar{
+    /* background-image: url(/IMAGE_MAQUETTE/gateau_good_.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; */
+    background-color: #FEEDF3;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 33px;
+    position: fixed;
+    width: 100%;
+    height: 9vh;
+    top: 0vw;
+    z-index: 1;
+}
+
+.mainLogo{
+    display: none;
+}
+
+.navbar a{
+    color: black;
+    text-decoration: none;
+    width: 10%;
+    text-align: center; 
+}
+.logoNav{
+    width: 130px;
+    margin-top: 1.5%;
+    position: absolute;
+    left: 47%;
+}
+
+/* .imgAccueil{
+    max-width: 100%;
+    height: auto;
+    background-position: center;
+   
+} */
+
+.accueil{
+    height: 100vh;
+    background-image: url(/IMAGE_MAQUETTE/caitlyn-de-wild-sxIVqaksdfE-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.intro{
+    margin-top: 10%;
+    margin-right: 5%;
+    float: right;
+    color: #FFF;
+    font-size: 45px;
+    width: 20vw;
+}
+.admin{
+    border: 0px;
+    border-radius: 10px;
+    background-color: #FFF;
+    font-size: 22px;
+        
+}
+
+/* SCROLL UN PEU, CES LA PAGE DE PRESENTATION  */
+
+/* ceci est pour que les 5 images soit disposer comme actuellement, j'en ai chier
+j'ai du séparer les 5 images en 2 groupes. puis jouer avec les flexbox pour parevenir a mes fins. */
+
+
+
+.presentation{
+    width: 100%;
+    display: flex;
+}
+
+.imagepres{
+    background-image: url(/IMAGE_MAQUETTE/annie-spratt-6SHd7Q-l1UQ-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 40%;
+    min-height: 14vw;
+    margin: 1vw;
+}
+
+.imagepres2{
+    background-image: url(/IMAGE_MAQUETTE/annie-spratt-_4iLsr5p-dY-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 15%;
+    min-height: 14vw;
+    margin: 1vw;
+}
+
+.imagepres3{
+    background-image: url(/IMAGE_MAQUETTE/annie-spratt-_4iLsr5p-dY-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 15%;
+    min-height: 14vw;
+    margin: 1vw;
+}
+
+.imagepres4{
+    background-image: url(/IMAGE_MAQUETTE/jacob-schwartz-enVg_Vtsw1c-unsplash.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    width: 40%;
+    height: 14vw;
+    margin: 1vw;
+}
+
+.imagepres5{
+    background-image: url(/IMAGE_MAQUETTE/american-heritage-chocolate-vdx5hPQhXFk-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 34%;
+    height: 14vw;
+    margin: 1vw;
+   
+}
+.container{
+    display: flex;
+}
+.containe2{
+    display: flex;
+}
+.toutelesphoto{
+    width: 50%;
+    margin-top: 5vw;
+}
+.bio{
+    font-size: 30px;
+    width: 50%;
+    margin-top: 5vw;
+}
+.mesprod{
+    border: 0px;
+    border-radius: 15px;
+    background: #ffffff;
+    box-shadow:  9px 9px 18px #7f7979,
+             -9px -9px 18px #ffffff;
+    margin-left: 35%;
+    font-size: 22px;
+    padding: 2%;
+}
+
+.logoPetit{
+    width: 100px;
+    margin-top: 0;
+    padding:0;
+}
+
+
+/* Passons au footer maintenant */
+
+.leFooter{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-top: 15%;
+}
+.icon1{
+    width: 50px;
+    height: max-content;
+}
+
+
+
+
+/* DEUXIEME PAGE, PAGE PRODUIT */
+
+#pageProduit{
+    background-image: url(/IMAGE_MAQUETTE/retouche.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding-top: 15%;
+}
+
+/* pour que ma mini navbar sois ecrite sur l'image */
+
+.miniNav{
+    position: fixed;
+    display: flex;
+    width: 85%;
+    justify-content: space-around;
+    align-items: center;
+    top: 9%;
+    border: 0px;
+    border-radius: 5px;
+    background-color: #FFFFFF;  
+    font-size: 22px;
+    margin-left: 7%;
+    -webkit-box-shadow: 5px 6px 15px -1px rgba(0,0,0,0.77); 
+    box-shadow: 5px 6px 15px -1px rgba(0,0,0,0.77);
+}
+.catNav{
+  opacity: 0;
+}
+.mininavCategori{
+    opacity: 0;
+}
+
+.categorie:hover{
+    cursor: pointer;
+}
+
+
+/* ICI CE TROUVE LE DESIGN DES PHOTOS */
+
+
+
+.toutelescartes{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.imgcarte{
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.espaceCarteSuperHero{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border: 0px;
+    border-radius: 15px;
+    background-color:#FFE5D9;
+    width: 50%;
+    height: max-content;
+   
+    box-shadow:  8px 8px 27px #a19999,
+             -8px -8px 27px #fff5f5;
+
+
+
+    margin-top: -15%;
+    margin-bottom: 10%;
+    padding: 2vw;
+    /* display: none; */
+}
+.espaceCarteDessinAnime{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border: 0px;
+    border-radius: 15px;
+    background-color:#FFE5D9;
+    width: 50%;
+    height: max-content;
+   
+    box-shadow:  8px 8px 27px #a19999,
+             -8px -8px 27px #fff5f5;
+
+
+
+    margin-top: -15%;
+    margin-bottom: 10%;
+    padding: 2vw;
+    display: none;
+}
+.espaceCarteJeuxVideo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border: 0px;
+    border-radius: 15px;
+    background-color:#FFE5D9;
+    width: 50%;
+    height: max-content;
+   
+    box-shadow:  8px 8px 27px #a19999,
+             -8px -8px 27px #fff5f5;
+
+
+
+    margin-top: -15%;
+    margin-bottom: 10%;
+    padding: 2vw;
+    display: none;
+}
+.espaceCarteFilm{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border: 0px;
+    border-radius: 15px;
+    background-color:#FFE5D9;
+    width: 50%;
+    height: max-content;
+   
+    box-shadow:  8px 8px 27px #a19999,
+             -8px -8px 27px #fff5f5;
+
+
+
+    margin-top: -15%;
+    margin-bottom: 10%;
+    padding: 2vw;
+    display: none;  
+}
+
+
+.carte{
+    background-color: #FFF;
+    margin-top: 30px;
+    border: 0px;
+    border-radius: 5px;
+    width: min-content;
+    height: max-content;
+    font-size: 20px;
+}
+.descriptionGateau{
+    padding: 4%;
+}
+/* .liksys{
+    border: 0px;
+    width: 3%;
+} */
+.tout{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.systeme{
+    display: flex;
+    align-items: center;
+
+}
+.systeme span{
+    margin-left: 0.5vw;
+}
+/* .commentaire{
+    margin-left: 50%;
+} */
+
+/* ICI DE TROUVE LES ESPACES VIDEOS, LES VIDEO SONT IMPORTER GRACE AU IFRAME
+MAJ: PAS DU TOUT GRACE AU IFRAME PCQ SA REND SUPER MAL ! ON LES AS DL PUIS MIS EN DURE :) */
+
+.espacevideo{
+    border: 0px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F5F5F5;
+    width: 70%;
+    box-shadow:  8px 8px 14px #767676,
+             -8px -8px 14px #ffffff;
+    margin-left: 15%;
+    height: 70vh;
+    /* display: none; */
+}
+.espacevideo2{
+    border: 0px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F5F5F5;
+    width: 70%;
+    box-shadow:  8px 8px 14px #767676,
+             -8px -8px 14px #ffffff;
+    margin-left: 15%;
+    height: 70vh;
+    display: none;
+}
+.espacevideo3{
+    border: 0px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F5F5F5;
+    width: 70%;
+    box-shadow:  8px 8px 14px #767676,
+             -8px -8px 14px #ffffff;
+    margin-left: 15%;
+    height: 70vh;
+    display: none;
+}
+.espacevideo4{
+    border: 0px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F5F5F5;
+    width: 70%;
+    box-shadow:  8px 8px 14px #767676,
+             -8px -8px 14px #ffffff;
+    margin-left: 15%;
+    height: 70vh;
+    display: none;
+}
+.espacevideo5{
+    border: 0px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F5F5F5;
+    width: 70%;
+    box-shadow:  8px 8px 14px #767676,
+             -8px -8px 14px #ffffff;
+    margin-left: 15%;
+    height: 70vh;
+    display: none;
+}
+.espacevideo6{
+    border: 0px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F5F5F5;
+    width: 70%;
+    box-shadow:  8px 8px 14px #767676,
+             -8px -8px 14px #ffffff;
+    margin-left: 15%;
+    height: 70vh;
+    display: none;
+}
+.espacevideo7{
+    border: 0px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F5F5F5;
+    width: 70%;
+    box-shadow:  8px 8px 14px #767676,
+             -8px -8px 14px #ffffff;
+    margin-left: 15%;
+    height: 70vh;
+    display: none;
+}
+
+
+
+
+
+.cartevideo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    
+}
+
+.titresection{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.description{
+    font-size: 24px;
+}
+.precedent{
+    font-size: 22px;
+}
+.precedent:hover{
+    cursor: pointer;
+}
+
+
+.change{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-items: center;
+    width: 70%;
+    font-size: 22px;
+}
+.autre:hover{
+    cursor: pointer;
+}
+
+.contacter{
+    /* background-image: url(/IMAGE_MAQUETTE/diana-akhmetianova-s358rpxEALI-unsplash.jpg); */
+    background-image: url(/IMAGE_MAQUETTE/ranurte-SykNC3DC630-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    padding-top: 1%;
+}
+
+.conctactermoi{
+    margin-top: 8%;
+    text-align: center;
+    font-size: 40px;
+    color: #FFF;
+}
+
+.formulaire1{
+    display: flex;
+    justify-content: center;
+    font-size: 32px;
+    margin-bottom: 3%;
+    color: #FFF;
+}
+.formulaire2{
+    display: flex;
+    justify-content: center;
+    margin-right: 32px;
+    font-size: 32px;
+    margin-bottom: 3%;
+    color: #FFF;
+}
+.formulaire3{
+    display: flex;
+    justify-content: center;
+    margin-right: 90px;
+    font-size: 32px;
+    margin-bottom: 3%;
+    color: #FFF;
+}
+.Nom{
+    width: 23.6%;
+    border: 0px;
+    border-radius: 5px;
+}
+
+.Nom:focus{
+    outline: 0;
+}
+
+.Prenom{
+    width: 24%;
+    border: 0px;
+    border-radius: 5px;
+}
+
+.Prenom:focus{
+    outline: 0;
+}
+
+.Email{
+    width: 24.8%;
+    border: 0px;
+    border-radius: 5px;
+}
+.Email:focus{
+    outline: 0;
+}
+
+.textemsg{
+    text-align: center;
+    margin-left: 31.5%;
+    border: 0px;
+    width: 38%;
+    height: 37%;
+    background-color: #F3EFEF;
+    border-radius: 5px;
+    box-shadow: 8px 6px 10px 5px rgba(0,0,0,0.74);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#textar{
+    border: 0px;
+    border-radius: 5px;
+    /* margin-top: 20px; */
+    margin-bottom: 4%;
+}
+#textar:focus{
+    outline: 0;
+}
+
+.validemsg{
+    border: 0px;
+    background-color: #FFF;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 20%
+}
