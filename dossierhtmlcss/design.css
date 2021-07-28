@@ -93,11 +93,12 @@ Je Rajoute "!important" car sinon ça ne me prends pas mes propriété et je sai
         transition: all ease-in-out 0.5s;
     }
     .catNav{
-        opacity: 1 !important;
+        /* opacity: 1 !important; */
+        display: flex !important;
     }
     .mininavCatouver{
         opacity: 1 !important;
-        top: 14% !important;
+        top: 13% !important;
         transition: all ease-in-out 0.8s !important;
     }
     .categorie{
@@ -427,7 +428,8 @@ j'ai du séparer les 5 images en 2 groupes. puis jouer avec les flexbox pour par
     box-shadow: 5px 6px 15px -1px rgba(0,0,0,0.77);
 }
 .catNav{
-  opacity: 0;
+  /* opacity: 0; */
+  display: none;
 }
 .mininavCategori{
     opacity: 0;
@@ -582,7 +584,7 @@ MAJ: PAS DU TOUT GRACE AU IFRAME PCQ SA REND SUPER MAL ! ON LES AS DL PUIS MIS E
     box-shadow:  8px 8px 14px #767676,
              -8px -8px 14px #ffffff;
     margin-left: 15%;
-    height: 70vh;
+    height: max-content;
     /* display: none; */
 }
 .espacevideo2{
@@ -596,7 +598,7 @@ MAJ: PAS DU TOUT GRACE AU IFRAME PCQ SA REND SUPER MAL ! ON LES AS DL PUIS MIS E
     box-shadow:  8px 8px 14px #767676,
              -8px -8px 14px #ffffff;
     margin-left: 15%;
-    height: 70vh;
+    height: max-content;
     display: none;
 }
 .espacevideo3{
@@ -610,7 +612,7 @@ MAJ: PAS DU TOUT GRACE AU IFRAME PCQ SA REND SUPER MAL ! ON LES AS DL PUIS MIS E
     box-shadow:  8px 8px 14px #767676,
              -8px -8px 14px #ffffff;
     margin-left: 15%;
-    height: 70vh;
+    height: max-content;
     display: none;
 }
 .espacevideo4{
@@ -624,7 +626,7 @@ MAJ: PAS DU TOUT GRACE AU IFRAME PCQ SA REND SUPER MAL ! ON LES AS DL PUIS MIS E
     box-shadow:  8px 8px 14px #767676,
              -8px -8px 14px #ffffff;
     margin-left: 15%;
-    height: 70vh;
+    height: max-content;
     display: none;
 }
 .espacevideo5{
@@ -638,7 +640,7 @@ MAJ: PAS DU TOUT GRACE AU IFRAME PCQ SA REND SUPER MAL ! ON LES AS DL PUIS MIS E
     box-shadow:  8px 8px 14px #767676,
              -8px -8px 14px #ffffff;
     margin-left: 15%;
-    height: 70vh;
+    height: max-content;
     display: none;
 }
 .espacevideo6{
@@ -652,7 +654,7 @@ MAJ: PAS DU TOUT GRACE AU IFRAME PCQ SA REND SUPER MAL ! ON LES AS DL PUIS MIS E
     box-shadow:  8px 8px 14px #767676,
              -8px -8px 14px #ffffff;
     margin-left: 15%;
-    height: 70vh;
+    height: max-content;
     display: none;
 }
 .espacevideo7{
@@ -666,7 +668,7 @@ MAJ: PAS DU TOUT GRACE AU IFRAME PCQ SA REND SUPER MAL ! ON LES AS DL PUIS MIS E
     box-shadow:  8px 8px 14px #767676,
              -8px -8px 14px #ffffff;
     margin-left: 15%;
-    height: 70vh;
+    height: max-content;
     display: none;
 }
 
@@ -692,11 +694,30 @@ MAJ: PAS DU TOUT GRACE AU IFRAME PCQ SA REND SUPER MAL ! ON LES AS DL PUIS MIS E
 
 .description{
     font-size: 24px;
+    margin: 0;
 }
 .precedent{
     font-size: 22px;
 }
 .precedent:hover{
+    cursor: pointer;
+}
+.precedent2:hover{
+    cursor: pointer;
+}
+.precedent3:hover{
+    cursor: pointer;
+}
+.precedent4:hover{
+    cursor: pointer;
+}
+.precedent5:hover{
+    cursor: pointer;
+}
+.precedent6:hover{
+    cursor: pointer;
+}
+.precedent7:hover{
     cursor: pointer;
 }
 
@@ -711,6 +732,24 @@ MAJ: PAS DU TOUT GRACE AU IFRAME PCQ SA REND SUPER MAL ! ON LES AS DL PUIS MIS E
     font-size: 22px;
 }
 .autre:hover{
+    cursor: pointer;
+}
+.autre2:hover{
+    cursor: pointer;
+}
+.autre3:hover{
+    cursor: pointer;
+}
+.autre4:hover{
+    cursor: pointer;
+}
+.autre5:hover{
+    cursor: pointer;
+}
+.autre6:hover{
+    cursor: pointer;
+}
+.autre7:hover{
     cursor: pointer;
 }
 
