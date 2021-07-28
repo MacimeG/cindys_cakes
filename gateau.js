@@ -238,6 +238,7 @@ for (let index = 0; index < jaime.length; index++) {
             element.nextElementSibling.innerHTML = 0
             element.setAttribute('src', '/IMAGE_MAQUETTE/NoPath - Copie (6).png')
         }
+        console.log(element)
         
     })
 }
