@@ -199,7 +199,7 @@ othervideo7.addEventListener('click', function(){
 const jaime = document.querySelectorAll('.like')
 const input = document.querySelectorAll('.liksys')
 console.log(jaime)
-
+// je crée cet boucle, pour pouvoir fermer la navbar au clique sur un élement de la navbar 
 // Ici je fais mon "systeme"de like. nextElementSibling et pour selectionné le prochain element suivant celui cliqué.
 for (let index = 0; index < jaime.length; index++) {
     const element = jaime[index];
