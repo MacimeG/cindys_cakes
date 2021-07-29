@@ -227,7 +227,7 @@ Je Rajoute "!important" car sinon ça ne me prends pas mes propriété et je sai
 /* PAGE DACCUEIL */
 @font-face {
     font-family: "perpetua";
-    src: url("/font/Perpetua-Std_35217.ttf");
+    src: url("./font/Perpetua-Std_35217.ttf");
 }
 
 body{
@@ -280,7 +280,7 @@ body{
 
 .accueil{
     height: 100vh;
-    background-image: url(/IMAGE_MAQUETTE/caitlyn-de-wild-sxIVqaksdfE-unsplash.jpg);
+    background-image: url(./IMAGE_MAQUETTE/caitlyn-de-wild-sxIVqaksdfE-unsplash.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -313,7 +313,7 @@ j'ai du séparer les 5 images en 2 groupes. puis jouer avec les flexbox pour par
 }
 
 .imagepres{
-    background-image: url(/IMAGE_MAQUETTE/annie-spratt-6SHd7Q-l1UQ-unsplash.jpg);
+    background-image: url(./IMAGE_MAQUETTE/annie-spratt-6SHd7Q-l1UQ-unsplash.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -323,7 +323,7 @@ j'ai du séparer les 5 images en 2 groupes. puis jouer avec les flexbox pour par
 }
 
 .imagepres2{
-    background-image: url(/IMAGE_MAQUETTE/annie-spratt-_4iLsr5p-dY-unsplash.jpg);
+    background-image: url(./IMAGE_MAQUETTE/annie-spratt-_4iLsr5p-dY-unsplash.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -333,7 +333,7 @@ j'ai du séparer les 5 images en 2 groupes. puis jouer avec les flexbox pour par
 }
 
 .imagepres3{
-    background-image: url(/IMAGE_MAQUETTE/annie-spratt-_4iLsr5p-dY-unsplash.jpg);
+    background-image: url(./IMAGE_MAQUETTE/annie-spratt-_4iLsr5p-dY-unsplash.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -343,7 +343,7 @@ j'ai du séparer les 5 images en 2 groupes. puis jouer avec les flexbox pour par
 }
 
 .imagepres4{
-    background-image: url(/IMAGE_MAQUETTE/jacob-schwartz-enVg_Vtsw1c-unsplash.jpg);
+    background-image: url(./IMAGE_MAQUETTE/jacob-schwartz-enVg_Vtsw1c-unsplash.jpg);
     background-size:cover;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -353,7 +353,7 @@ j'ai du séparer les 5 images en 2 groupes. puis jouer avec les flexbox pour par
 }
 
 .imagepres5{
-    background-image: url(/IMAGE_MAQUETTE/american-heritage-chocolate-vdx5hPQhXFk-unsplash.jpg);
+    background-image: url(./IMAGE_MAQUETTE/american-heritage-chocolate-vdx5hPQhXFk-unsplash.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
