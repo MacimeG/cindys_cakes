@@ -63,6 +63,15 @@ Je Rajoute "!important" car sinon ça ne me prends pas mes propriété et je sai
         padding-top: 14%;
         width: 100% !important;
     }
+    .container{
+        height: 17vh !important;
+    }
+    .imagepres4{
+        height: 12vh !important;
+    }
+    .imagepres5{
+        height: 12vh !important;
+    }
     .intro{
         font-size: 40px !important;
         margin-right: 9% !important;
@@ -98,15 +107,20 @@ Je Rajoute "!important" car sinon ça ne me prends pas mes propriété et je sai
     }
     .mininavCatouver{
         opacity: 1 !important;
-        top: 13% !important;
+        top: 12% !important;
         transition: all ease-in-out 0.8s !important;
     }
     .categorie{
         display: none;
     }
+    .film{
+        margin-bottom: 30% !important;
+    }
     .toutelesphoto{
-        width: 75% !important;
-        margin-left: 10% !important;
+        /* width: 75% !important;
+        margin-left: 10% !important; */
+        width: 80% !important;
+        margin-left: 18% !important;
     }
     .toutelescartes{
         padding-top: 25% !important;
