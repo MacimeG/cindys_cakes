@@ -414,7 +414,7 @@ j'ai du séparer les 5 images en 2 groupes. puis jouer avec les flexbox pour par
 /* DEUXIEME PAGE, PAGE PRODUIT */
 
 #pageProduit{
-    background-image: url(/IMAGE_MAQUETTE/retouche.jpg);
+    background-image: url(./IMAGE_MAQUETTE/retouche.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -767,7 +767,7 @@ MAJ: PAS DU TOUT GRACE AU IFRAME PCQ SA REND SUPER MAL ! ON LES AS DL PUIS MIS E
 
 .contacter{
     /* background-image: url(/IMAGE_MAQUETTE/diana-akhmetianova-s358rpxEALI-unsplash.jpg); */
-    background-image: url(/IMAGE_MAQUETTE/ranurte-SykNC3DC630-unsplash.jpg);
+    background-image: url(./IMAGE_MAQUETTE/ranurte-SykNC3DC630-unsplash.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
