@@ -207,10 +207,10 @@ for (let index = 0; index < jaime.length; index++) {
     element.addEventListener('click', function(){
         console.log(element.nextElementSibling)
         element.nextElementSibling.innerHTML++
-        element.setAttribute('src', '/IMAGE_MAQUETTE/NoPath.png')
+        element.setAttribute('src', './IMAGE_MAQUETTE/NoPath.png')
         if(element.nextElementSibling.textContent == 2){
             element.nextElementSibling.innerHTML = 0
-            element.setAttribute('src', '/IMAGE_MAQUETTE/NoPath - Copie (6).png')
+            element.setAttribute('src', './IMAGE_MAQUETTE/NoPath - Copie (6).png')
         }
         console.log(element)
         
