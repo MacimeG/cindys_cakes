@@ -193,19 +193,11 @@ Je Rajoute "!important" car sinon ça ne me prends pas mes propriété et je sai
     .contacter{
         padding-top: 15% !important;
     }
-    .textemsg{
+    /* .textemsg{
         width: 80% !important;
         margin-left: 10% !important;
-    }
-    .formulaire1{
-        font-size: 30px !important;
-    }
-    .formulaire2{
-        font-size: 30px !important;
-    }
-    .formulaire3{
-        font-size: 30px !important;
-    }
+    } */
+    
 
     .Nom{
         width: 25% !important;
@@ -217,7 +209,10 @@ Je Rajoute "!important" car sinon ça ne me prends pas mes propriété et je sai
         width: 30% !important;
     }
     #textar{
-        width:78% !important;
+        width:75% !important;
+    }
+    .validemsg{
+        width: max-content !important;
     }
 }
 
@@ -783,7 +778,7 @@ MAJ: PAS DU TOUT GRACE AU IFRAME PCQ SA REND SUPER MAL ! ON LES AS DL PUIS MIS E
     color: #FFF;
 }
 
-.formulaire1{
+/* .formulaire1{
     display: flex;
     justify-content: center;
     font-size: 32px;
@@ -853,7 +848,7 @@ MAJ: PAS DU TOUT GRACE AU IFRAME PCQ SA REND SUPER MAL ! ON LES AS DL PUIS MIS E
 #textar{
     border: 0px;
     border-radius: 5px;
-    /* margin-top: 20px; */
+    margin-top: 20px;
     margin-bottom: 4%;
 }
 #textar:focus{
@@ -867,4 +862,61 @@ MAJ: PAS DU TOUT GRACE AU IFRAME PCQ SA REND SUPER MAL ! ON LES AS DL PUIS MIS E
     padding: 10px;
     border-radius: 10px;
     width: 20%
+} */
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    font-size: 32px;
+}
+
+#textar{
+    border: 0px;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 4%;
+}
+#textar:focus{
+    outline: 0;
+}
+.Nom{
+    width: 23.6%;
+    border: 0px;
+    border-radius: 5px;
+    margin-bottom: 1%;
+}
+.Nom:focus{
+    outline: 0;
+}
+.Prenom{
+    width: 24%;
+    border: 0px;
+    border-radius: 5px;
+    margin-bottom: 1%;
+}
+.Prenom:focus{
+    outline: 0;
+}
+.Email{
+    width: 24.8%;
+    border: 0px;
+    border-radius: 5px;
+    margin-bottom: 1%;
+}
+.Email:focus{
+    outline: 0;
+}
+.mail{
+    margin-top: 1%;
+}
+.validemsg{
+    border: 0px;
+    background-color: #FFF;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 10%;
 }
