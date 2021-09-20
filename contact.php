@@ -17,14 +17,14 @@ session_start();
         <a href="index.html">Accueil</a>
         <a href="sndpage.html">Produit</a>
         <img src="./IMAGE_MAQUETTE/gateau_good_.png" alt="" class="logoNav">
-        <a href="contact.html">Contact</a>
+        <a href="contact.php">Contact</a>
         <p class="admin">connexion admin</p>
     </header>
     
     <div class="menuNavbar">
         <a href="index.html">Accueil</a>
         <a href="sndpage.html">Produit</a>
-        <a href="contact.html" class="contact">Contact</a>
+        <a href="contact.php" class="contact">Contact</a>
         <p>Connexion Admin</p>
     </div>
 
