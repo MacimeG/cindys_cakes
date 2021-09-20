@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,7 +67,20 @@
 
                 <label for="textarea">ecris ton texte:</label>
                 <textarea name="textarea" id="textar" cols="62" rows="15" placeholder="Ecrivez votre message ici"></textarea>
-                
+
+                <span><?php
+
+                if (isset($_SESSION['erreur'])) {
+                    echo $_SESSION['erreur'];
+                }
+                if(isset($_SESSION['victoire'])){
+                    echo $_SESSION['victoire'];
+                }
+                session_destroy();
+                ?></span>
+               
+
+
                 <input type="submit" name="validmsg" value="valider" class="validemsg">
             </form>
     </section>
