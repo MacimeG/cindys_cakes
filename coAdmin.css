@@ -1,0 +1,29 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(255, 255, 235);
+}
+
+ .formulaire{
+     display: flex;
+     flex-direction: column;
+     width: 25%;
+     border: none; 
+     margin-top: 5em;
+     padding: 2em;
+     background-color: grey;
+     border-radius: 2%; 
+     height: 30em;
+     justify-content: space-around;
+ }
+
+ #valid{
+     width: 10em;
+     margin-left: 10em;
+     margin-top: 2em;
+ }
+ h2{
+     margin: 0;
+ }

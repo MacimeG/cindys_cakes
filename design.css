@@ -158,6 +158,11 @@ Je Rajoute "!important" car sinon ça ne me prends pas mes propriété et je sai
     .icon1{
         width: 50px !important;
     }
+    .iconco{
+        width: 25px !important;
+        height: max-content !important;
+
+    }
     .espacevideo{
         width: 75% !important;
         height: max-content !important;
@@ -252,7 +257,9 @@ body{
 .mainLogo{
     display: none;
 }
-
+.sndpage{
+    margin-right: 20em;
+}
 .navbar a{
     color: black;
     text-decoration: none;
@@ -402,6 +409,10 @@ j'ai du séparer les 5 images en 2 groupes. puis jouer avec les flexbox pour par
     width: 50px;
     height: max-content;
 }
+.iconco{
+    width: 35px;
+    height: max-content;
+}
 
 
 
@@ -440,6 +451,7 @@ j'ai du séparer les 5 images en 2 groupes. puis jouer avec les flexbox pour par
 }
 .mininavCategori{
     opacity: 0;
+    margin-left: -100px;
 }
 
 .categorie:hover{

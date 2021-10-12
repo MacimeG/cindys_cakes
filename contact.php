@@ -18,14 +18,14 @@ session_start();
         <a href="sndpage.html">Produit</a>
         <img src="./IMAGE_MAQUETTE/gateau_good_.png" alt="" class="logoNav">
         <a href="contact.php">Contact</a>
-        <p class="admin">connexion admin</p>
+        <!-- <p class="admin">connexion admin</p> -->
     </header>
     
     <div class="menuNavbar">
         <a href="index.html">Accueil</a>
         <a href="sndpage.html">Produit</a>
         <a href="contact.php" class="contact">Contact</a>
-        <p>Connexion Admin</p>
+        <!-- <p>Connexion Admin</p> -->
     </div>
 
     <section class="contacter">
@@ -71,12 +71,13 @@ session_start();
                 <span><?php
 
                 if (isset($_SESSION['erreur'])) {
+
                     echo $_SESSION['erreur'];
                 }
                 if(isset($_SESSION['victoire'])){
                     echo $_SESSION['victoire'];
                 }
-                session_destroy();
+               
                 ?></span>
                
 

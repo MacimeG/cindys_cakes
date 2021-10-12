@@ -1,6 +1,7 @@
 <?php
+session_start();
 $username =  htmlspecialchars($_POST['username']);
-$name =  htmlspecialchars($_POST['name']);
+$name =  htmlspecialchars($_POST['prenom']);
 $mail =  htmlspecialchars($_POST['email']);
 $area =  htmlspecialchars($_POST['textarea']);
 
@@ -14,34 +15,46 @@ if(isset($username) && !empty($username)){
     $username = cleanUp($username);
 
     if(isset($name) && !empty($name)){
-        $name = cleanInput($name);
+        $name = cleanUp($name);
 
         if(isset($mail) && !empty($mail)){
-            filter_var(cleanInput($mail, FILTER_VALIDATE_EMAIL));
+            filter_var(cleanUp($mail, FILTER_VALIDATE_EMAIL));
            
 
             if(isset($area) && !empty($area)){
                 $area = cleanUp($area);
-                $_SESSION['victoire'] = "Votre message a bien étais envoyer";
+                $dest = "maxime.glaneux@gmail.com";
+                $sujet = "Cindy Cakes";
+                $corp = "$area";
+                $headers = "From: $mail";
+                
+                if (mail($dest, $sujet, $corp, $headers)) {
+                    $_SESSION['victoire'] = "Votre message a bien étais envoyer a $dest";
+                    header('location: ./contact.php');
+                } else {
+                    echo "Échec de l'envoi de l'email...";
+                    header('location: ./contact.php');
+                }
+                
             }
             else{
-                $_SESSION['erreur'] = "VEUILLEZ ENTREZ DU TEXT";
-                header('location: ./contact.html');
+                $_SESSION['erreur'] = "<h2>Veuillez entrez du texte</h2>";
+                header('location: ./contact.php');
             }
         }
         else{
-            $_SESSION['erreur'] = "VEUILLEZ ENTREZ UN MAIL VALIDE";
-            header('location: ./contact.html');
+            $_SESSION['erreur'] = "Veuillez entrez une adresse mail valide";
+            header('location: ./contact.php');
         }
     } 
     else{
-        $_SESSION['erreur'] = "MAUVAIS FIRST NAME";
-        header('location: ./contact.html');
+        $_SESSION['erreur'] = "Mauvais prenom";
+        header('location: ./contact.php');
     }
 }
 else{
     $_SESSION["erreur"] = "Mauvais nom";
-    header('location: ./contact.html');
+    header('location: ./contact.php');
 }
 
 //  if(isset($_POST['username']) &&!empty($_POST['username']))
@@ -63,5 +76,3 @@ else{
 //  if(isset($_POST['textarea']) &&!empty($_POST['textarea']))
      
 //     echo htmlspecialchars($_POST['textarea']);
- 
-?>

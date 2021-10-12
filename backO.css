@@ -1,0 +1,99 @@
+@media screen and (max-width:480px){
+    body{
+        margin: 0 !important;
+    }
+    .navbar{
+        font-size: 18px !important;    
+    }
+    .navbar a {
+        display: none;
+    }
+    .mainLogo{
+        display: block !important;
+        width: 50px !important;
+        margin-right: 85% !important;
+        
+    }
+    .menuNavbar{
+        /* background-color: #FEEDF3 !important; */
+        background-color: #becdff !important;
+        border: 0px !important;
+        top: 9% !important;
+        position: fixed !important;
+        width: 100% !important;
+        height: 100% !important;
+        font-size: 24px !important;
+        text-align: center !important;
+        display: flex;
+        flex-direction: column;
+        opacity: 0;
+        justify-content: space-around; 
+        transition: all ease-in-out 0.5s;
+        top: -100% !important;
+    }
+    .acc{
+        margin-top: 20% !important;
+    }
+    
+    .menuNavbar a{
+        text-decoration: none !important;
+        color: black !important;
+    }
+    
+    .leMenuouver{
+        opacity: 1;
+        top: 0% !important;
+        transition: all ease-in-out 0.5s;
+    }
+
+    .logoNav{
+        width: 80px !important;
+        left: 38% !important;
+    }
+    .logoPetit{
+        margin-left: 17px !important;
+    }
+}
+.navbar{
+    background-color: #becdff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 33px;
+    position: fixed;
+    width: 100%;
+    height: 9vh;
+    top: 0vw;
+    z-index: 1;
+}
+.mainLogo{
+    display: none;
+}
+.sndpage{
+    margin-right: 20em;
+}
+.navbar a{
+    color: black;
+    text-decoration: none;
+    width: 10%;
+    text-align: center; 
+}
+.logoNav{
+    width: 130px;
+    margin-top: 1.5%;
+    position: absolute;
+    left: 47%;
+}
+
+.upFichier{
+    margin-top: 4em;
+}
+.preview {
+	max-width: 200px;
+	max-height: 200px;
+	display: block;
+}
+.deco{
+    
+    font-size: large;
+}
