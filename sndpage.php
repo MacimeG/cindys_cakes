@@ -45,10 +45,49 @@
             <p class="film boucle">Film</p>
         </div>
 
-        <div class="toutelescartes">
+
+
+<!-- <?php 
+
+    for($i = 0; $i < 3; $i++) { ?>
+        <div class="carte">
+        <img src="<?php echo $bdd->photo ?>" alt="" width="250px" class="imgcarte">
+        <section class="descriptionGateau">
+            <p><?php echo $bdd->description ?><p> -->
+            <!-- <i class="far fa-heart kiki"></i> -->
+            <!-- <div class="tout">
+                
+                <div class="systeme">
+                    <img src="./IMAGE_MAQUETTE/NoPath - Copie (6).png" alt="" class="like">
+                   <span class="liksys">0</span>
+                </div>
+                    <img src="./IMAGE_MAQUETTE/NoPath - Copie (26).png" alt="" class="commentaire" width="28px">
+            </div>
+        </section>
+        </div>
+    <?php } ?> -->
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="toutelescartes">
+
+
+
 
             <section class="espaceCarteSuperHero">
-    
+
+
                     <div class="carte">
                     <img src="./IMAGE_MAQUETTE/116253388_1144852355896973_5788792347378793057_n.jpg" alt="" width="250px" class="imgcarte">
                     <section class="descriptionGateau">
@@ -467,7 +506,7 @@
 
             </section>
 
-        </div>
+    </div>
 
 
 

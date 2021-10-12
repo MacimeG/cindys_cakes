@@ -35,18 +35,27 @@
         <h2>Upload Fichier</h2>
         <label for="fileUpload">Fichier:</label>
         <input type="file" name="photo" id="fileUpload" data-preview=".preview">
-        <input type="submit" name="submit" value="Upload" >
+        <!-- <input type="submit" name="submit" value="Upload" > -->
         <img src="" alt="" class="preview">
         <p><strong>Note:</strong> Seuls les formats .jpg, .jpeg, .jpeg, .gif, .png sont autorisés jusqu'à une taille maximale de 5 Mo.</p>
-    </form>
-
-    <form action="descriptionPhoto.php" method="post">
+    
         <h2> rajouter nom et description </h2>
                 <label for="nom">Nom:</label>
                 <input type="text" name="nomCake" class="Nom">
 
                 <label for="description">Description:</label>
                 <input type="text" name="descriptionCake" class="Prenom">
+
+                <label for="categorie">categorie: </label>
+                
+                <select name="categorie" id="categorie">
+                    <option value="">--Catégorie--</option>
+                    <option value="super héros">super heros</option>
+                    <option value="dessin animé">dessin animé</option>
+                    <option value="jeux video">jeux video</option>
+                    <option value="film">film</option>
+                </select>
+
                 <input type="submit" name="submit" value="Enregistrer" >
     </form>
 
