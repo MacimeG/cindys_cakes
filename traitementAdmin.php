@@ -50,6 +50,7 @@ elseif(isset($pseudo) && empty($password)){
     header('location: ./connexionCC.php');
 }
 else{
+    $_SESSION['verif'] = $array[0]->pseudo;
     header('location: ./backCake.php');
 }
 
