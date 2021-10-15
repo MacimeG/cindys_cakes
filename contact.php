@@ -34,26 +34,6 @@ session_start();
             <p>Vous souhaitez me contacter ? N'hésitez plus !</p>
         </div>
 
-            <!-- <div class="formulaire1">
-
-                <label for="nom">Nom:</label>
-                <input type="text" name="nom" class="Nom">
-            </div>
-            <div class="formulaire2">
-                <label for="prenom">Prenom:</label>
-                <input type="text" name="prenom" class="Prenom">
-            </div>
-            <div class="formulaire3">
-            
-                <label for="email">Adresse Mail:</label>
-                <input type="text" name="email" class="Email">
-            </div>
-
-            <div class="textemsg">
-                <textarea name="textarea" id="textar" cols="62" rows="15" placeholder="Ecrivez votre message ici"></textarea>
-                <button class="validemsg">Valider</button>
-                <input type="submit" name="validmsg" value="valider">
-            </div> -->
             
             <form action="./formu.php" method="post">
                 <label for="nom">Nom:</label>
