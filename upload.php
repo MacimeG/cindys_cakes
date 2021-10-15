@@ -83,4 +83,4 @@ foreach ($arrayPhoto as $key => $value) {
 }
 
 
-
+// Requete pour supprimer les photos, ou video, mais avant sa un peu de CSS coté front et meme coté back 
