@@ -13,17 +13,6 @@ function cleanInput($input){
         return $input;
 }
 
-// ICI LES VARIABLES DE NOS BASE DE DONNEES
-
-// define('DB_HOST', 'localhost');
-// define('DB_PORT', '3306');
-// define('DB_DATABASE','cindy');
-// define('DB_USERNAME', 'cindy'); 
-// define('DB_PASSWORD', 'cindycake');
-
-//ICI NOUS FAISONT UNE CLASS, QUI APPELLE NOTRE BASE DE DONNEES AVEC LES VARIABLES DU DESSUS.
-
-// $database = new PDO('mysql:host='.DB_HOST.';port='.DB_PORT.';dbname='.DB_DATABASE, DB_USERNAME, DB_PASSWORD);
 
 // ICI NOUS PREPARONS, DEFINISSON ET EXECUTE DES REQUETTES SQL.
 
