@@ -65,7 +65,7 @@ else{
     // header('location: ./backCake.php');
 }
 
-// ici la requete et la boucle pour faire afficher toute les photos de ma base de données. 
+// ici la requete et la boucle pour faire afficher toute les photos de ma base de données. CSS a faire 
 
 
 $requeteGetPhoto = "SELECT photo FROM multimedia";
