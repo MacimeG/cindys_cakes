@@ -59,41 +59,28 @@ else{
         
     }
     else{
-        $_SESSION['format']= "<h3 color='red'>ce n'est pas le bon format<h3>";
+        $_SESSION['format']= "<h3>ce n'est pas le bon format<h3>";
     }
     
-    header('location: ./backCake.php');
+    // header('location: ./backCake.php');
 }
 
- 
-
-// $prep = $database->prepare($requeteDescription);
-// $prep->execute(array("$uploads_dir_image/$name", NULL));
-/*
-$prep->execute(array("$uploads_dir_image/$name, NULL"));
-$prep->execute(array(NULL, "$uploads_dir_video/$name"));*/
-
-// $arrayDesc = $prep->fetchAll(PDO::FETCH_OBJ);
-
-// var_dump($arrayDesc);
-
-// $requeteEnvoiPhoto
+// ici la requete et la boucle pour faire afficher toute les photos de ma base de données. 
 
 
-
-/*$requeteGetPhoto = "SELECT photo FROM multimedia";
+$requeteGetPhoto = "SELECT photo FROM multimedia";
 
 $prepa = $database->prepare($requeteGetPhoto);
 $prepa->execute();
 
-$arrayPhoto = $prepa->fetchAll(PDO::FETCH_OBJ);*/
+$arrayPhoto = $prepa->fetchAll(PDO::FETCH_OBJ);
 
-/*var_dump($arrayPhoto);
+var_dump($arrayPhoto);
 foreach ($arrayPhoto as $key => $value) {
     foreach ($value as  $newValue) {
         echo "<img width='50%' src='".$newValue."' alt='' >";
     }
-}*/
+}
 
-?>
+
 
