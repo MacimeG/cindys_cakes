@@ -1,4 +1,5 @@
 <?php
+session_start();
 include './connexionDB.php';
 
 $uploads_dir_image = './IMAGE_MAQUETTE';
@@ -17,14 +18,12 @@ $name = $_FILES['photo']['name'];
 // header('location: ./backCake.php');
 
 
-$requeteDescription = "INSERT INTO `gateau`( `nom`, `description`, `categorie`) VALUES (?, ?, ?)"; 
+// $requeteDescription = "INSERT INTO `gateau`( `nom`, `description`, `categorie`) VALUES (?, ?, ?)"; 
 
+// $prep = $database->prepare($requeteDescription);
+// $prep->execute(array($_POST['nomCake'],$_POST['descriptionCake'], $_POST['categorie']));
 
-
-$prep = $database->prepare($requeteDescription);
-$prep->execute(array($_POST['nomCake'],$_POST['descriptionCake'], $_POST['categorie']));
-
-$requeteDescription = "INSERT INTO `multimedia`(`photo`, `video`, `gateau_id`) VALUES (?, ?, (SELECT id FROM gateau ORDER BY id DESC LIMIT 1))";
+// $requeteDescription = "INSERT INTO `multimedia`(`photo`, `video`, `gateau_id`) VALUES (?, ?, (SELECT id FROM gateau ORDER BY id DESC LIMIT 1))";
 
 // INSERT INTO `multimedia`(`photo`, `video`, `gateau_id`) VALUES ('test','test', (SELECT id FROM gateau ORDER BY id DESC LIMIT 1))
 // $regex= '/video*/';
@@ -34,23 +33,39 @@ $requeteDescription = "INSERT INTO `multimedia`(`photo`, `video`, `gateau_id`) V
 $extensionsvideo = array("video/mp4", "video/mov", "video/avi", "video/flv", "video/wmv");
 $extensionPhoto = array("image/gif", "image/jpeg", "image/png", "image/svg");
 
-var_dump($_FILES['photo']['type']);
-if(in_array($_FILES['photo']['type'], $extensionsvideo)){
-    move_uploaded_file($tmp_name, "$uploads_dir_video/$name");
-    echo "c'est une video";
-    $prep = $database->prepare($requeteDescription);
-    $prep->execute(array(NULL, "$uploads_dir_video/$name"));
-}
-elseif(in_array($_FILES['photo']["type"], $extensionPhoto)){
-    move_uploaded_file($tmp_name, "$uploads_dir_image/$name");
-    $prep = $database->prepare($requeteDescription);
-    $prep->execute(array("$uploads_dir_image/$name", NULL));
+if($_FILES['photo']['type'] === "" || $_POST['nomCake'] === "" ||  $_POST['descriptionCake'] == ""){
+    echo "il est vide";
 }
 else{
-    echo "ce format n'est pas autorisée";
+
+            $requeteDescription = "INSERT INTO `gateau`( `nom`, `description`, `categorie`) VALUES (?, ?, ?)"; 
+            $prep = $database->prepare($requeteDescription);
+            $prep->execute(array($_POST['nomCake'],$_POST['descriptionCake'], $_POST['categorie']));
+
+            $requeteDes = "INSERT INTO `multimedia`(`photo`, `video`, `gateau_id`) VALUES (?, ?, (SELECT id FROM gateau ORDER BY id DESC LIMIT 1))";
+
+    if(in_array($_FILES['photo']['type'], $extensionsvideo)){
+        move_uploaded_file($tmp_name, "$uploads_dir_video/$name");
+        echo "c'est une video";
+        $prep = $database->prepare($requeteDes);
+        $prep->execute(array(NULL, "$uploads_dir_video/$name"));
+        
+    }
+    elseif(in_array($_FILES['photo']["type"], $extensionPhoto)){
+    
+        move_uploaded_file($tmp_name, "$uploads_dir_image/$name");
+        $prep = $database->prepare($requeteDes);
+        $prep->execute(array("$uploads_dir_image/$name", NULL));
+        
+    }
+    else{
+        $_SESSION['format']= "<h3 color='red'>ce n'est pas le bon format<h3>";
+    }
+    
+    header('location: ./backCake.php');
 }
 
-
+ 
 
 // $prep = $database->prepare($requeteDescription);
 // $prep->execute(array("$uploads_dir_image/$name", NULL));
@@ -63,20 +78,6 @@ $prep->execute(array(NULL, "$uploads_dir_video/$name"));*/
 // var_dump($arrayDesc);
 
 // $requeteEnvoiPhoto
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

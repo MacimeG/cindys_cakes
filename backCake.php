@@ -62,6 +62,12 @@ if(!isset($_SESSION['verif'])){
                 </select>
 
                 <input type="submit" name="submit" value="Enregistrer" >
+
+                <span><?php
+                   if(isset($_SESSION['format'])){
+                       echo $_SESSION['format'];
+                   }
+                ?></span>
     </form>
 
   
