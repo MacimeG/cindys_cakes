@@ -11,10 +11,10 @@ var_dump($_FILES['photo']);
 $tmp_name = $_FILES['photo']['tmp_name'];
 $name = $_FILES['photo']['name'];
 
-move_uploaded_file($tmp_name, "$uploads_dir_image/$name");
-// move_uploaded_file($tmp_name, "$uploads_dir_video/$name");
 
-header('location: ./backCake.php');
+
+
+// header('location: ./backCake.php');
 
 
 $requeteDescription = "INSERT INTO `gateau`( `nom`, `description`, `categorie`) VALUES (?, ?, ?)"; 
@@ -31,31 +31,26 @@ $requeteDescription = "INSERT INTO `multimedia`(`photo`, `video`, `gateau_id`) V
 // $regex2 = '/photo*/';
 
 
+$extensionsvideo = array("video/mp4", "video/mov", "video/avi", "video/flv", "video/wmv");
+$extensionPhoto = array("image/gif", "image/jpeg", "image/png", "image/svg");
+
+var_dump($_FILES['photo']['type']);
+if(in_array($_FILES['photo']['type'], $extensionsvideo)){
+    move_uploaded_file($tmp_name, "$uploads_dir_video/$name");
+    echo "c'est une video";
+    $prep = $database->prepare($requeteDescription);
+    $prep->execute(array(NULL, "$uploads_dir_video/$name"));
+}
+elseif(in_array($_FILES['photo']["type"], $extensionPhoto)){
+    move_uploaded_file($tmp_name, "$uploads_dir_image/$name");
+    $prep = $database->prepare($requeteDescription);
+    $prep->execute(array("$uploads_dir_image/$name", NULL));
+}
+else{
+    echo "ce format n'est pas autorisée";
+}
 
 
-
-
-
-
-
-
-
-
-
-// if($_FILES['photo']['type'] == 'video/mp4'){
-
-//     echo "c'est une video";
-    // $prep = $database->prepare($requeteDescription);
-    // $prep->execute(array(NULL, "$uploads_dir_video/$name"));
-// }
-// else {
-//     echo "ce n'est pas une video";
-// }
-// elseif ($_FILES['photo']) {
-
-//     $prep = $database->prepare($requeteDescription);
-//     $prep->execute(array("$uploads_dir_image/$name", NULL));
-// }
 
 // $prep = $database->prepare($requeteDescription);
 // $prep->execute(array("$uploads_dir_image/$name", NULL));
