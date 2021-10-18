@@ -1,6 +1,6 @@
 <?php
 session_start();
-include './connexionDB.php';
+
 include './getPhoto.php';
 if(!isset($_SESSION['verif'])){
     header('location: ./index.html');
@@ -38,14 +38,14 @@ if(!isset($_SESSION['verif'])){
 
 
     <form action="upload.php" method="post" enctype="multipart/form-data" class="upFichier">
-        <h2>Upload Fichier</h2>
+        <h2><u>Upload Fichier</u></h2>
         <label for="fileUpload">Fichier:</label>
         <input type="file" name="photo" id="fileUpload" data-preview=".preview">
         <!-- <input type="submit" name="submit" value="Upload" > -->
         <img src="" alt="" class="preview">
         <p><strong>Note:</strong> Seuls les formats .jpg, .jpeg, .jpeg, .gif, .png sont autorisés jusqu'à une taille maximale de 5 Mo.</p>
     
-        <h2> rajouter nom et description </h2>
+        <h2><u> rajouter nom et description</u> </h2>
                 <label for="nom">Nom:</label>
                 <input type="text" name="nomCake" class="Nom">
 
@@ -70,20 +70,38 @@ if(!isset($_SESSION['verif'])){
                    }
                 ?></span>
     </form>
+    <h2><u>tous les gâteaux</u></h2>
     <div class="allPicture">
     
 
-    <?php var_dump($arrayPhoto); ?>
-        <h3>tous les gâteau</h3>
-        <?php foreach ($arrayPhoto as $key => $value) {
-            foreach ($value as $newValue) { ?>
-                   
-                <img src="<?php echo $newValue ?>"alt="" srcset="" width="150px">
-                <section>nom: <?php  ?> </section>
-                <section>description: </section>
-                <section><a href="">supprimer</a></section>
+
+        <?php foreach ($arrayPhoto as $key => $value) { ?>
+                <!-- <?php var_dump($value['gateau_id']); ?>  -->
+                <img src="<?php echo $value['photo'] ?>"alt="" srcset="" width="150px">
                 <?php
-            }
+                // $requeteGetNom = "SELECT `id`, `nom`, `description` FROM `gateau` WHERE id = ?";
+                // $prep = $database->prepare($requeteGetNom);
+
+                $prep->execute([$value['gateau_id']]);
+
+                $arrayNom = $prep->fetchAll(PDO::FETCH_ASSOC);
+                // var_dump($arrayNom);
+                foreach ($arrayNom as $value => $newValue) {
+                    // var_dump($newValue['nom']);
+                    ?>
+                    <section><u>Nom:</u> <br>
+                    <?php echo $newValue['nom']?>
+
+                    <u>Description:</u> <br>
+                    <?php echo $newValue['description'] ?> <br>
+                    <!-- <input type="hidden" value="<?php$value['gateau_id']?>"> -->
+
+                    <a href="delete.php?id=<?php echo $newValue['id'];?>">supprimer</a></section>
+                    <?php
+                }
+                
+                
+            
         }
         ?>
     </div>

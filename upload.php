@@ -62,7 +62,7 @@ else{
         $_SESSION['format']= "<h3>ce n'est pas le bon format<h3>";
     }
     
-    // header('location: ./backCake.php');
+    header('location: ./backCake.php');
 }
 
 // ici la requete et la boucle pour faire afficher toute les photos de ma base de données. CSS a faire 
