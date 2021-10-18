@@ -1,6 +1,7 @@
 <?php
 session_start();
-
+include './connexionDB.php';
+include './getPhoto.php';
 if(!isset($_SESSION['verif'])){
     header('location: ./index.html');
 }
@@ -19,7 +20,7 @@ if(!isset($_SESSION['verif'])){
     <!-- JE CREE MA NAVBAR -->
     <header class="navbar">
         <img src="./IMAGE_MAQUETTE/NoPath - Copie (15).png" class="mainLogo" alt="">
-        <a href="#accueil">Accueil</a>
+        <a href="index.html">Accueil</a>
         <a href="sndpage.html" class="sndpage">Produit</a>
         <img src="./IMAGE_MAQUETTE/gateau_good_.png" alt="" class="logoNav">
         <a href="contact.php" class="contact">Contact</a>
@@ -69,6 +70,24 @@ if(!isset($_SESSION['verif'])){
                    }
                 ?></span>
     </form>
+    <div class="allPicture">
+    
+
+    <?php var_dump($arrayPhoto); ?>
+        <h3>tous les gâteau</h3>
+        <?php foreach ($arrayPhoto as $key => $value) {
+            foreach ($value as $newValue) { ?>
+                   
+                <img src="<?php echo $newValue ?>"alt="" srcset="" width="150px">
+                <section>nom: <?php  ?> </section>
+                <section>description: </section>
+                <section><a href="">supprimer</a></section>
+                <?php
+            }
+        }
+        ?>
+    </div>
+   
 
   
 

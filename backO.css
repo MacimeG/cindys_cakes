@@ -86,7 +86,7 @@
 }
 
 .upFichier{
-    margin-top: 4em;
+    margin-top: 6em;
 }
 .preview {
 	max-width: 200px;
@@ -96,4 +96,14 @@
 .deco{
     
     font-size: large;
+}
+
+body{
+    margin: 0;
+}
+.allPicture{
+    /* margin-top: 5px; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }

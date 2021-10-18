@@ -68,19 +68,19 @@ else{
 // ici la requete et la boucle pour faire afficher toute les photos de ma base de données. CSS a faire 
 
 
-$requeteGetPhoto = "SELECT photo FROM multimedia";
+// $requeteGetPhoto = "SELECT photo FROM multimedia";
 
-$prepa = $database->prepare($requeteGetPhoto);
-$prepa->execute();
+// $prepa = $database->prepare($requeteGetPhoto);
+// $prepa->execute();
 
-$arrayPhoto = $prepa->fetchAll(PDO::FETCH_OBJ);
+// $arrayPhoto = $prepa->fetchAll(PDO::FETCH_OBJ);
 
-var_dump($arrayPhoto);
-foreach ($arrayPhoto as $key => $value) {
-    foreach ($value as  $newValue) {
-        echo "<img width='50%' src='".$newValue."' alt='' >";
-    }
-}
+// var_dump($arrayPhoto);
+// foreach ($arrayPhoto as $key => $value) {
+//     foreach ($value as  $newValue) {
+//         echo "<img width='100px' src='".$newValue."' alt='' >";
+//     }
+// }
 
-
+// header('location: backCake.php');
 // Requete pour supprimer les photos, ou video, mais avant sa un peu de CSS coté front et meme coté back 
