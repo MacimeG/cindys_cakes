@@ -457,6 +457,7 @@ j'ai du séparer les 5 images en 2 groupes. puis jouer avec les flexbox pour par
 .mininavCategori{
     opacity: 0;
     margin-left: -100px;
+    display: none;
 }
 
 .categorie:hover{
@@ -473,6 +474,7 @@ j'ai du séparer les 5 images en 2 groupes. puis jouer avec les flexbox pour par
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    margin-top: 13em;
 }
 .imgcarte{
     border-top-left-radius: 8px;

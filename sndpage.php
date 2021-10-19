@@ -50,33 +50,13 @@ include './vueSndPage.php';
 
 
 
-<!-- <?php 
-
-    for($i = 0; $i < 3; $i++) { ?>
-        <div class="carte">
-        <img src="<?php echo $bdd->photo ?>" alt="" width="250px" class="imgcarte">
-        <section class="descriptionGateau">
-            <p><?php echo $bdd->description ?><p> -->
-            <!-- <i class="far fa-heart kiki"></i> -->
-            <!-- <div class="tout">
-                
-                <div class="systeme">
-                    <img src="./IMAGE_MAQUETTE/NoPath - Copie (6).png" alt="" class="like">
-                   <span class="liksys">0</span>
-                </div>
-                    <img src="./IMAGE_MAQUETTE/NoPath - Copie (26).png" alt="" class="commentaire" width="28px">
-            </div>
-        </section>
-        </div>
-    <?php } ?> -->
-
     <div class="toutelescartes">
 
 
 
 
             <section class="espaceCarteSuperHero">
-            <div class="carte">
+            
             <?php
             foreach ($arrayNom as $key => $value) {
                 if ($value['categorie']==="super héros") {
@@ -85,6 +65,7 @@ include './vueSndPage.php';
                     $arrayPhoto = $prepa->fetchAll(PDO::FETCH_ASSOC);
                 foreach ($arrayPhoto as $newkey => $newValue) {
                     // var_dump($newValue);
+                    ?><div class="carte"><?php
                     echo "<img src='".$newValue['photo']."'alt='' srcset='' width='150em' class='imgcarte'>";
                 }
 
@@ -103,37 +84,18 @@ include './vueSndPage.php';
                                 <img src="./IMAGE_MAQUETTE/NoPath - Copie (26).png" alt="" class="commentaire" width="28px">
                         </div>
                     </section>
+                    </div> 
                 <?php    
                 }
             }
             ?>
-            </div> 
-                    <!-- <div class="carte">
-                    <img src="./IMAGE_MAQUETTE/116253388_1144852355896973_5788792347378793057_n.jpg" alt="" width="250px" class="imgcarte">
-                    <section class="descriptionGateau">
-                        <p>Description: Gâteau chocolat PAW PATROL, Génoise chocolat
-                            Garni chantilly poire copeaux de chocolat</p>
-                        <p>Difficulté: Moyenne</p>
-                        <p>Temps: 3h</p>
-                         <i class="far fa-heart kiki"></i>
-                        <div class="tout">
-                            
-                            <div class="systeme">
-                                <img src="./IMAGE_MAQUETTE/NoPath - Copie (6).png" alt="" class="like">
-                               <span class="liksys">0</span>
-                            </div>
-                                <img src="./IMAGE_MAQUETTE/NoPath - Copie (26).png" alt="" class="commentaire" width="28px">
-                        </div>
-                    </section>
-                    </div>  -->
-    
-                    
+               
 
             </section>
 
             <section class="espaceCarteDessinAnime">
 
-            <div class="carte">
+            
             <?php
             foreach ($arrayNom as $key => $value) {
                 if ($value['categorie']==="dessin animé") {
@@ -142,6 +104,7 @@ include './vueSndPage.php';
                     $arrayPhoto = $prepa->fetchAll(PDO::FETCH_ASSOC);
                 foreach ($arrayPhoto as $newkey => $newValue) {
                     // var_dump($newValue);
+                    ?><div class="carte"><?php
                     echo "<img src='".$newValue['photo']."'alt='' srcset='' width='150em' class='imgcarte'>";
                 }
 
@@ -160,38 +123,23 @@ include './vueSndPage.php';
                                 <img src="./IMAGE_MAQUETTE/NoPath - Copie (26).png" alt="" class="commentaire" width="28px">
                         </div>
                     </section>
+                    </div> 
                 <?php    
                 }
             }
             ?>
-            </div> 
 
 
 
 
-                <!-- <div class="carte">
-                    <img src="./IMAGE_MAQUETTE/imgretouche6.png" alt="" width="250px" class="imgcarte">
-                    <section class="descriptionGateau">
-                        <p>Description: Gâteaux sur le thème de la belle et la bête,Génoise vanille garniture confiture de fraise</p>
-                        <p>Difficulté: Moyenne</p>
-                        <p>Temps: 3h</p>
-                        <div class="tout">
-                            
-                            <div class="systeme">
-                                <img src="./IMAGE_MAQUETTE/NoPath - Copie (6).png" alt="" class="like">
-                               <span class="liksys">0</span>
-                            </div>
-                                <img src="./IMAGE_MAQUETTE/NoPath - Copie (26).png" alt="" class="commentaire" width="28px">
-                        </div>
-                    </section>
-                </div> -->
+             
     
                 
 
             </section>
 
             <section class="espaceCarteJeuxVideo">
-            <div class="carte">
+            
             <?php
             foreach ($arrayNom as $key => $value) {
                 if ($value['categorie']==="jeux video") {
@@ -200,6 +148,7 @@ include './vueSndPage.php';
                     $arrayPhoto = $prepa->fetchAll(PDO::FETCH_ASSOC);
                 foreach ($arrayPhoto as $newkey => $newValue) {
                     // var_dump($newValue);
+                    ?><div class="carte"><?php
                     echo "<img src='".$newValue['photo']."'alt='' srcset='' width='150em' class='imgcarte'>";
                 }
 
@@ -218,28 +167,12 @@ include './vueSndPage.php';
                                 <img src="./IMAGE_MAQUETTE/NoPath - Copie (26).png" alt="" class="commentaire" width="28px">
                         </div>
                     </section>
+                    </div> 
                 <?php    
                 }
             }
             ?>
-            </div> 
-                <!-- <div class="carte">
-                    <img src="./IMAGE_MAQUETTE/imgretouche12.png" alt="" width="250px" class="imgcarte">
-                    <section class="descriptionGateau">
-                        <p>Description: Gâteau chocolat PAW PATROL, Génoise chocolat
-                            Garni chantilly poire copeaux de chocolat</p>
-                        <p>Difficulté: Moyenne</p>
-                        <p>Temps: 3h</p>
-                        <div class="tout">
-                            
-                            <div class="systeme">
-                                <img src="./IMAGE_MAQUETTE/NoPath - Copie (6).png" alt="" class="like">
-                               <span class="liksys">0</span>
-                            </div>
-                                <img src="./IMAGE_MAQUETTE/NoPath - Copie (26).png" alt="" class="commentaire" width="28px">
-                        </div>
-                    </section>
-                </div> -->
+             
     
                 
 
@@ -247,53 +180,42 @@ include './vueSndPage.php';
 
             <section class="espaceCarteFilm">
             
-            <div class="carte">
-            <?php
+                <?php
             foreach ($arrayNom as $key => $value) {
                 if ($value['categorie']==="film") {
                     // var_dump($value['id']);
                     $prepa->execute([$value['id']]);
-                    $arrayPhoto = $prepa->fetchAll(PDO::FETCH_ASSOC);
-                foreach ($arrayPhoto as $newkey => $newValue) {
-                    // var_dump($newValue);
+                    $arrayPhoto = $prepa->fetchAll(\PDO::FETCH_ASSOC);
+                    foreach ($arrayPhoto as $newkey => $newValue) {
+                        // var_dump($newValue);
+                    ?><div class="carte"><?php
                     echo "<img src='".$newValue['photo']."'alt='' srcset='' width='150em' class='imgcarte'>";
-                }
-
+                    ?>
+                    <?php
+                    }
+                    
                     ?>
                     <section class="descriptionGateau">
                         <?php echo $value["nom"]; ?>
                         <?php echo $value["description"]; ?>
                         
-                         
+                        
                         <div class="tout">
                             
                             <div class="systeme">
                                 <img src="./IMAGE_MAQUETTE/NoPath - Copie (6).png" alt="" class="like">
-                               <span class="liksys">0</span>
+                                <span class="liksys">0</span>
                             </div>
-                                <img src="./IMAGE_MAQUETTE/NoPath - Copie (26).png" alt="" class="commentaire" width="28px">
+                            <img src="./IMAGE_MAQUETTE/NoPath - Copie (26).png" alt="" class="commentaire" width="28px">
                         </div>
                     </section>
-                <?php    
+                    
+                    </div> 
+                    <?php    
                 }
             }
             ?>
-            </div> 
-                <!-- <div class="carte">
-                    <img src="./IMAGE_MAQUETTE/imgretouche2.png" alt="" width="250px" class="imgcarte">
-                    <section class="descriptionGateau">
-                        <p>Description: Gâteau thème panda, génoise vanille garniture mousseline framboise citron</p>
-                        <p>Temps: 3h</p>
-                        <div class="tout">
-                            
-                            <div class="systeme">
-                                <img src="./IMAGE_MAQUETTE/NoPath - Copie (6).png" alt="" class="like">
-                               <span class="liksys">0</span>
-                            </div>
-                                <img src="./IMAGE_MAQUETTE/NoPath - Copie (26).png" alt="" class="commentaire" width="28px">
-                        </div>
-                    </section>
-                </div> -->
+              
     
                
             </section>
