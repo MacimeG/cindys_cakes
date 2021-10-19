@@ -378,6 +378,10 @@ j'ai du séparer les 5 images en 2 groupes. puis jouer avec les flexbox pour par
     font-size: 30px;
     width: 50%;
     margin-top: 5vw;
+    margin-right: 2em;
+}
+.cindybio{
+    text-align: justify;
 }
 .mesprod{
     border: 0px;

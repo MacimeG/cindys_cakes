@@ -21,7 +21,7 @@ if(!isset($_SESSION['verif'])){
     <header class="navbar">
         <img src="./IMAGE_MAQUETTE/NoPath - Copie (15).png" class="mainLogo" alt="">
         <a href="index.html">Accueil</a>
-        <a href="sndpage.html" class="sndpage">Produit</a>
+        <a href="sndpage.php" class="sndpage">Produit</a>
         <img src="./IMAGE_MAQUETTE/gateau_good_.png" alt="" class="logoNav">
         <a href="contact.php" class="contact">Contact</a>
         <a href="deconnexion.php" class="deco">deconnexion</a>
@@ -30,7 +30,7 @@ if(!isset($_SESSION['verif'])){
     <div class="accueil">
         <div class="menuNavbar">
             <a href="index.html" class="acc">Accueil</a>
-            <a href="sndpage.html">Produit</a>
+            <a href="sndpage.php">Produit</a>
             <a href="contact.php" class="contact">Contact</a>
             <!-- <p>Connexion Admin</p> -->
         </div>
@@ -71,13 +71,13 @@ if(!isset($_SESSION['verif'])){
                 ?></span>
     </form>
     <h2><u>tous les gâteaux</u></h2>
-    <div class="allPicture">
+<div class="allPicture">
     
 
-
-        <?php foreach ($arrayPhoto as $key => $value) { ?>
-                <!-- <?php var_dump($value['gateau_id']); ?>  -->
-                <img src="<?php echo $value['photo'] ?>"alt="" srcset="" width="150px">
+    <?php foreach ($arrayPhoto as $key => $value) { ?>
+        <!-- <?php var_dump($value['gateau_id']); ?>  -->
+        <div class="containerBack">   
+                <img src="<?php echo $value['photo'] ?>"alt="" srcset="" width="150em">
                 <?php
                 // $requeteGetNom = "SELECT `id`, `nom`, `description` FROM `gateau` WHERE id = ?";
                 // $prep = $database->prepare($requeteGetNom);
@@ -89,19 +89,21 @@ if(!isset($_SESSION['verif'])){
                 foreach ($arrayNom as $value => $newValue) {
                     // var_dump($newValue['nom']);
                     ?>
-                    <section><u>Nom:</u> <br>
+                    
+                        <u>Nom:</u> 
                     <?php echo $newValue['nom']?>
 
-                    <u>Description:</u> <br>
-                    <?php echo $newValue['description'] ?> <br>
+                    <u>Description:</u>
+                    <?php echo $newValue['description'] ?> 
                     <!-- <input type="hidden" value="<?php$value['gateau_id']?>"> -->
 
-                    <a href="delete.php?id=<?php echo $newValue['id'];?>">supprimer</a></section>
+                    <a href="delete.php?id=<?php echo $newValue['id'];?>">supprimer</a>
+                
                     <?php
                 }
-                
-                
-            
+                ?>
+        </div>            
+        <?php    
         }
         ?>
     </div>

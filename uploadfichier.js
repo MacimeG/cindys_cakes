@@ -1,4 +1,5 @@
-
+// $ = DocumentQuerySelector 
+// change et un ecouteur d'évenement.
 $("input[data-preview]").change(function() {
 	var $input = $(this);
 	var fileReader = new FileReader();
