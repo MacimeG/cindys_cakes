@@ -1,3 +1,6 @@
+<?php
+include './vueSndPage.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -67,35 +70,49 @@
         </div>
     <?php } ?> -->
 
-
-</section>
-
-
-
-
-
-
-
-
-
-
-
     <div class="toutelescartes">
 
 
 
 
             <section class="espaceCarteSuperHero">
+            <div class="carte">
+            <?php
+            foreach ($arrayNom as $key => $value) {
+                if ($value['categorie']==="super héros") {
+                    // var_dump($value['id']);
+                    $prepa->execute([$value['id']]);
+                    $arrayPhoto = $prepa->fetchAll(PDO::FETCH_ASSOC);
 
 
-                    <div class="carte">
+                    echo "<img src='".$arrayPhoto[0]['photo']."'alt='' srcset='' width='150em' class='imgcarte'>";
+                    ?>
+                    <section class="descriptionGateau">
+                        <?php echo $arrayNom[0]["description"]; ?>
+                        
+                         <i class="far fa-heart kiki"></i>
+                        <div class="tout">
+                            
+                            <div class="systeme">
+                                <img src="./IMAGE_MAQUETTE/NoPath - Copie (6).png" alt="" class="like">
+                               <span class="liksys">0</span>
+                            </div>
+                                <img src="./IMAGE_MAQUETTE/NoPath - Copie (26).png" alt="" class="commentaire" width="28px">
+                        </div>
+                    </section>
+                <?php    
+                }
+            }
+            ?>
+            </div> 
+                    <!-- <div class="carte">
                     <img src="./IMAGE_MAQUETTE/116253388_1144852355896973_5788792347378793057_n.jpg" alt="" width="250px" class="imgcarte">
                     <section class="descriptionGateau">
                         <p>Description: Gâteau chocolat PAW PATROL, Génoise chocolat
                             Garni chantilly poire copeaux de chocolat</p>
                         <p>Difficulté: Moyenne</p>
                         <p>Temps: 3h</p>
-                        <!-- <i class="far fa-heart kiki"></i> -->
+                         <i class="far fa-heart kiki"></i>
                         <div class="tout">
                             
                             <div class="systeme">
@@ -105,89 +122,9 @@
                                 <img src="./IMAGE_MAQUETTE/NoPath - Copie (26).png" alt="" class="commentaire" width="28px">
                         </div>
                     </section>
-                    </div>
+                    </div>  -->
     
-                    <div class="carte">
-                    <img src="./IMAGE_MAQUETTE/imgretouche1.png" alt="" width="250px" class="imgcarte">
-                    <section class="descriptionGateau">
-                        <p>Description: Génoise vanille chantilly framboise</p>
-                        <p>Difficulté: Moyenne</p>
-                        <p>Temps: 3h</p>
-                        <div class="tout">
-                            
-                            <div class="systeme">
-                                <img src="./IMAGE_MAQUETTE/NoPath - Copie (6).png" alt="" class="like">
-                               <span class="liksys">0</span>
-                            </div>
-                                <img src="./IMAGE_MAQUETTE/NoPath - Copie (26).png" alt="" class="commentaire" width="28px">
-                        </div>
-                    </section>
-                    </div>
-    
-                    <div class="carte">
-                    <img src="./IMAGE_MAQUETTE/imgretouche2.png" alt="" width="250px" class="imgcarte">
-                    <section class="descriptionGateau">
-                        <p>Description: Gâteau thème panda, génoise vanille garniture mousseline framboise citron</p>
-                        <p>Difficulté: Moyenne</p>
-                        <p>Temps: 3h</p>
-                        <div class="tout">
-                            
-                            <div class="systeme">
-                                <img src="./IMAGE_MAQUETTE/NoPath - Copie (6).png" alt="" class="like">
-                               <span class="liksys">0</span>
-                            </div>
-                                <img src="./IMAGE_MAQUETTE/NoPath - Copie (26).png" alt="" class="commentaire" width="28px">
-                        </div>
-                    </section>
-                    </div>
-                     <div class="carte">
-                        <img src="./IMAGE_MAQUETTE/imgretouche3.png" alt="" width="250px" class="imgcarte">
-                        <section class="descriptionGateau">
-                            <p>Description: Gâteau pat patrouille fille ,Génoise chocolat garniture forêt noire</p>
-                            <p>Difficulté: Moyenne</p>
-                            <p>Temps: 3h</p>
-                            <div class="tout">
-                            
-                                <div class="systeme">
-                                    <img src="./IMAGE_MAQUETTE/NoPath - Copie (6).png" alt="" class="like">
-                                   <span class="liksys">0</span>
-                                </div>
-                                    <img src="./IMAGE_MAQUETTE/NoPath - Copie (26).png" alt="" class="commentaire" width="28px">
-                            </div>
-                        </section>
-                    </div>
-                     <div class="carte">
-                        <img src="./IMAGE_MAQUETTE/imgretouche4.png" alt="" width="250px" class="imgcarte">
-                        <section class="descriptionGateau">
-                            <p>Description: Gâteau sur le thème Marie,Génoise vanille garniture confiture framboise</p>
-                            <p>Difficulté: Moyenne</p>
-                            <p>Temps: 3h</p>
-                            <div class="tout">
-                            
-                                <div class="systeme">
-                                    <img src="./IMAGE_MAQUETTE/NoPath - Copie (6).png" alt="" class="like">
-                                   <span class="liksys">0</span>
-                                </div>
-                                    <img src="./IMAGE_MAQUETTE/NoPath - Copie (26).png" alt="" class="commentaire" width="28px">
-                            </div>
-                        </section>
-                    </div>
-                     <div class="carte">
-                        <img src="./IMAGE_MAQUETTE/imgretouche5.png" alt="" width="250px" class="imgcarte">
-                        <section class="descriptionGateau">
-                            <p>Description: Gâteau sur le thème cars,Génoise chocolat garniture lemon</p>
-                            <p>Difficulté: Moyenne</p>
-                            <p>Temps: 3h</p>
-                            <div class="tout">
-                            
-                                <div class="systeme">
-                                    <img src="./IMAGE_MAQUETTE/NoPath - Copie (6).png" alt="" class="like">
-                                   <span class="liksys">0</span>
-                                </div>
-                                    <img src="./IMAGE_MAQUETTE/NoPath - Copie (26).png" alt="" class="commentaire" width="28px">
-                            </div>
-                        </section>
-                    </div>
+                    
 
             </section>
 
@@ -210,89 +147,7 @@
                     </section>
                 </div>
     
-                <div class="carte">
-                    <img src="./IMAGE_MAQUETTE/imgretouche7.png" alt="" width="250px" class="imgcarte">
-                    <section class="descriptionGateau">
-                        <p>Description: Gâteaux sur le thème de la belle et la bête,Génoise vanille garniture confiture de fraise</p>
-                        <p>Difficulté: Moyenne</p>
-                        <p>Temps: 3h</p>
-                        <div class="tout">
-                            
-                            <div class="systeme">
-                                <img src="./IMAGE_MAQUETTE/NoPath - Copie (6).png" alt="" class="like">
-                               <span class="liksys">0</span>
-                            </div>
-                                <img src="./IMAGE_MAQUETTE/NoPath - Copie (26).png" alt="" class="commentaire" width="28px">
-                        </div>
-                    </section>
-                </div>
-    
-                <div class="carte">
-                    <img src="./IMAGE_MAQUETTE/imgretouche8.png" alt="" width="250px" class="imgcarte">
-                    <section class="descriptionGateau">
-                        <p>Description: Gâteau sur le thème Mickey,Génoise vanille ganache montée au chocolat</p>
-                        <p>Difficulté: Moyenne</p>
-                        <p>Temps: 3h</p>
-                        <div class="tout">
-                            
-                            <div class="systeme">
-                                <img src="./IMAGE_MAQUETTE/NoPath - Copie (6).png" alt="" class="like">
-                               <span class="liksys">0</span>
-                            </div>
-                                <img src="./IMAGE_MAQUETTE/NoPath - Copie (26).png" alt="" class="commentaire" width="28px">
-                        </div>
-                    </section>
-                </div>
-                     <div class="carte">
-                        <img src="./IMAGE_MAQUETTE/imgretouche9.png" alt="" width="250px" class="imgcarte">
-                        <section class="descriptionGateau">
-                            <p>Description: Gâteau sur le thème de la Petite Sirène,génoise vanille avec ganache nutella 
-                                Et génoise vanille chantilly fraise</p>
-                            <p>Difficulté: Moyenne</p>
-                            <p>Temps: 3h</p>
-                            <div class="tout">
-                            
-                                <div class="systeme">
-                                    <img src="./IMAGE_MAQUETTE/NoPath - Copie (6).png" alt="" class="like">
-                                   <span class="liksys">0</span>
-                                </div>
-                                    <img src="./IMAGE_MAQUETTE/NoPath - Copie (26).png" alt="" class="commentaire" width="28px">
-                            </div>
-                        </section>
-                    </div>
-                     <div class="carte">
-                        <img src="./IMAGE_MAQUETTE/imgretouche10.png" alt="" width="250px" class="imgcarte">
-                        <section class="descriptionGateau">
-                            <p>Description: Gâteau sur le thème Ferrari, génoise vanille garni chantilly fraise</p>
-                            <p>Difficulté: Moyenne</p>
-                            <p>Temps: 3h</p>
-                            <div class="tout">
-                            
-                                <div class="systeme">
-                                    <img src="./IMAGE_MAQUETTE/NoPath - Copie (6).png" alt="" class="like">
-                                   <span class="liksys">0</span>
-                                </div>
-                                    <img src="./IMAGE_MAQUETTE/NoPath - Copie (26).png" alt="" class="commentaire" width="28px">
-                            </div>
-                        </section>
-                    </div>
-                     <div class="carte">
-                        <img src="./IMAGE_MAQUETTE/imgretouche11.png" alt="" width="250px" class="imgcarte">
-                        <section class="descriptionGateau">
-                            <p>Description: Gâteau licorne,Génoise vanille ganache nutella
-                                Génoise vanille ganache chantilly fraise</p>
-                            <p>Difficulté: Moyenne</p>
-                            <p>Temps: 3h</p>
-                            <div class="tout">
-                            
-                                <div class="systeme">
-                                    <img src="./IMAGE_MAQUETTE/NoPath - Copie (6).png" alt="" class="like">
-                                   <span class="liksys">0</span>
-                                </div>
-                                    <img src="./IMAGE_MAQUETTE/NoPath - Copie (26).png" alt="" class="commentaire" width="28px">
-                            </div>
-                        </section>
-                    </div>
+                
 
             </section>
 
@@ -316,91 +171,7 @@
                     </section>
                 </div>
     
-                <div class="carte">
-                    <img src="./IMAGE_MAQUETTE/imgretouche13.png" alt="" width="250px" class="imgcarte">
-                    <section class="descriptionGateau">
-                        <p>Description: gâteau sur le thème Minnie et glamour avec petite couronne Génoise vanille
-                            Garniture fraisier</p>
-                        <p>Difficulté: Moyenne</p>
-                        <p>Temps: 3h</p>
-                        <div class="tout">
-                            
-                            <div class="systeme">
-                                <img src="./IMAGE_MAQUETTE/NoPath - Copie (6).png" alt="" class="like">
-                               <span class="liksys">0</span>
-                            </div>
-                                <img src="./IMAGE_MAQUETTE/NoPath - Copie (26).png" alt="" class="commentaire" width="28px">
-                        </div>
-                    </section>
-                </div>
-    
-                <div class="carte">
-                    <img src="./IMAGE_MAQUETTE/imgretouche14.png" alt="" width="250px" class="imgcarte">
-                    <section class="descriptionGateau">
-                        <p>Description: Gâteau roi lion , Génoise vanille chantilly fraise 
-                            Génoise chocolat et intérieur tout chocolat </p>
-                        <p>Difficulté: Moyenne</p>
-                        <p>Temps: 3h</p>
-                        <div class="tout">
-                            
-                            <div class="systeme">
-                                <img src="./IMAGE_MAQUETTE/NoPath - Copie (6).png" alt="" class="like">
-                               <span class="liksys">0</span>
-                            </div>
-                                <img src="./IMAGE_MAQUETTE/NoPath - Copie (26).png" alt="" class="commentaire" width="28px">
-                        </div>
-                    </section>
-                </div>
-                     <div class="carte">
-                        <img src="./IMAGE_MAQUETTE/imgretouche15.png" alt="" width="250px" class="imgcarte">
-                        <section class="descriptionGateau">
-                            <p>Description: Gâteau poupée lol génoise vanille intérieur chantilly fraise</p>
-                            <p>Difficulté: Moyenne</p>
-                            <p>Temps: 3h</p>
-                            <div class="tout">
-                            
-                                <div class="systeme">
-                                    <img src="./IMAGE_MAQUETTE/NoPath - Copie (6).png" alt="" class="like">
-                                   <span class="liksys">0</span>
-                                </div>
-                                    <img src="./IMAGE_MAQUETTE/NoPath - Copie (26).png" alt="" class="commentaire" width="28px">
-                            </div>
-                        </section>
-                    </div>
-                     <div class="carte">
-                        <img src="./IMAGE_MAQUETTE/imgretouche16.png" alt="" width="250px" class="imgcarte">
-                        <section class="descriptionGateau">
-                            <p>Description: gâteau sur le thème Minnie et glamour avec petite couronne Génoise vanille
-                                Garniture fraisier</p>
-                            <p>Difficulté: Moyenne</p>
-                            <p>Temps: 3h</p>
-                            <div class="tout">
-                            
-                                <div class="systeme">
-                                    <img src="./IMAGE_MAQUETTE/NoPath - Copie (6).png" alt="" class="like">
-                                   <span class="liksys">0</span>
-                                </div>
-                                    <img src="./IMAGE_MAQUETTE/NoPath - Copie (26).png" alt="" class="commentaire" width="28px">
-                            </div>
-                        </section>
-                    </div>
-                     <div class="carte">
-                        <img src="./IMAGE_MAQUETTE/116253388_1144852355896973_5788792347378793057_n.jpg" alt="" width="250px" class="imgcarte">
-                        <section class="descriptionGateau">
-                            <p>Description: Gâteau chocolat PAW PATROL, Génoise chocolat
-                                Garni chantilly poire copeaux de chocolat</p>
-                            <p>Difficulté: Moyenne</p>
-                            <p>Temps: 3h</p>
-                            <div class="tout">
-                            
-                                <div class="systeme">
-                                    <img src="./IMAGE_MAQUETTE/NoPath - Copie (6).png" alt="" class="like">
-                                   <span class="liksys">0</span>
-                                </div>
-                                    <img src="./IMAGE_MAQUETTE/NoPath - Copie (26).png" alt="" class="commentaire" width="28px">
-                            </div>
-                        </section>
-                    </div>
+                
 
             </section>
 
@@ -422,88 +193,7 @@
                     </section>
                 </div>
     
-                <div class="carte">
-                    <img src="./IMAGE_MAQUETTE/imgretouche3.png" alt="" width="250px" class="imgcarte">
-                    <section class="descriptionGateau">
-                        <p>Description: Gâteau pat patrouille, Génoise chocolat garniture forêt noire</p>
-                        <p>Difficulté: Moyenne</p>
-                        <p>Temps: 3h</p>
-                        <div class="tout">
-                            
-                            <div class="systeme">
-                                <img src="./IMAGE_MAQUETTE/NoPath - Copie (6).png" alt="" class="like">
-                               <span class="liksys">0</span>
-                            </div>
-                                <img src="./IMAGE_MAQUETTE/NoPath - Copie (26).png" alt="" class="commentaire" width="28px">
-                        </div>
-                    </section>
-                </div>
-    
-                <div class="carte">
-                    <img src="./IMAGE_MAQUETTE/imgretouche4.png" alt="" width="250px" class="imgcarte">
-                    <section class="descriptionGateau">
-                        <p>Description: Gâteau sur le thème Marie,Génoise vanille garniture confiture framboise</p>
-                        <p>Difficulté: Moyenne</p>
-                        <p>Temps: 3h</p>
-                        <div class="tout">
-                            
-                            <div class="systeme">
-                                <img src="./IMAGE_MAQUETTE/NoPath - Copie (6).png" alt="" class="like">
-                               <span class="liksys">0</span>
-                            </div>
-                                <img src="./IMAGE_MAQUETTE/NoPath - Copie (26).png" alt="" class="commentaire" width="28px">
-                        </div>
-                    </section>
-                </div>
-                     <div class="carte">
-                        <img src="./IMAGE_MAQUETTE/imgretouche5.png" alt="" width="250px" class="imgcarte">
-                        <section class="descriptionGateau">
-                            <p>Description:  Gâteau sur le thème cars,Génoise chocolat garniture lemon</p>
-                            <p>Difficulté: Moyenne</p>
-                            <p>Temps: 3h</p>
-                            <div class="tout">
-                            
-                                <div class="systeme">
-                                    <img src="./IMAGE_MAQUETTE/NoPath - Copie (6).png" alt="" class="like">
-                                   <span class="liksys">0</span>
-                                </div>
-                                    <img src="./IMAGE_MAQUETTE/NoPath - Copie (26).png" alt="" class="commentaire" width="28px">
-                            </div>
-                        </section>
-                    </div>
-                     <div class="carte">
-                        <img src="./IMAGE_MAQUETTE/imgretouche6.png" alt="" width="250px" class="imgcarte">
-                        <section class="descriptionGateau">
-                            <p>Description: Gâteaux sur le thème de la belle et la bête,Génoise vanille garniture confiture de fraise</p>
-                            <p>Difficulté: Moyenne</p>
-                            <p>Temps: 3h</p>
-                            <div class="tout">
-                            
-                                <div class="systeme">
-                                    <img src="./IMAGE_MAQUETTE/NoPath - Copie (6).png" alt="" class="like">
-                                   <span class="liksys">0</span>
-                                </div>
-                                    <img src="./IMAGE_MAQUETTE/NoPath - Copie (26).png" alt="" class="commentaire" width="28px">
-                            </div>
-                        </section>
-                    </div>
-                     <div class="carte">
-                        <img src="./IMAGE_MAQUETTE/imgretouche7.png" alt="" width="250px" class="imgcarte">
-                        <section class="descriptionGateau">
-                            <p>Description: Gâteaux sur le thème de la belle et la bête,Génoise vanille garniture confiture de fraise</p>
-                            <p>Difficulté: Moyenne</p>
-                            <p>Temps: 3h</p>
-                            <div class="tout">
-                            
-                                <div class="systeme">
-                                    <img src="./IMAGE_MAQUETTE/NoPath - Copie (6).png" alt="" class="like">
-                                   <span class="liksys">0</span>
-                                </div>
-                                    <img src="./IMAGE_MAQUETTE/NoPath - Copie (26).png" alt="" class="commentaire" width="28px">
-                            </div>
-                        </section>
-                    </div>
-
+               
             </section>
 
     </div>

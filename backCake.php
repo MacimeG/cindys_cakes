@@ -77,7 +77,7 @@ if(!isset($_SESSION['verif'])){
     <?php foreach ($arrayPhoto as $key => $value) { ?>
         <!-- <?php var_dump($value['gateau_id']); ?>  -->
         <div class="containerBack">   
-                <img src="<?php echo $value['photo'] ?>"alt="" srcset="" width="150em">
+                <img src="<?php echo $value['photo'] ?>"alt="" srcset="" width="150em" class="imgBack">
                 <?php
                 // $requeteGetNom = "SELECT `id`, `nom`, `description` FROM `gateau` WHERE id = ?";
                 // $prep = $database->prepare($requeteGetNom);
