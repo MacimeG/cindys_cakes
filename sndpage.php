@@ -83,14 +83,17 @@ include './vueSndPage.php';
                     // var_dump($value['id']);
                     $prepa->execute([$value['id']]);
                     $arrayPhoto = $prepa->fetchAll(PDO::FETCH_ASSOC);
+                foreach ($arrayPhoto as $newkey => $newValue) {
+                    // var_dump($newValue);
+                    echo "<img src='".$newValue['photo']."'alt='' srcset='' width='150em' class='imgcarte'>";
+                }
 
-
-                    echo "<img src='".$arrayPhoto[0]['photo']."'alt='' srcset='' width='150em' class='imgcarte'>";
                     ?>
                     <section class="descriptionGateau">
-                        <?php echo $arrayNom[0]["description"]; ?>
+                        <?php echo $value["nom"]; ?>
+                        <?php echo $value["description"]; ?>
                         
-                         <i class="far fa-heart kiki"></i>
+                         
                         <div class="tout">
                             
                             <div class="systeme">
@@ -129,8 +132,44 @@ include './vueSndPage.php';
             </section>
 
             <section class="espaceCarteDessinAnime">
-    
-                <div class="carte">
+
+            <div class="carte">
+            <?php
+            foreach ($arrayNom as $key => $value) {
+                if ($value['categorie']==="dessin animé") {
+                    // var_dump($value['id']);
+                    $prepa->execute([$value['id']]);
+                    $arrayPhoto = $prepa->fetchAll(PDO::FETCH_ASSOC);
+                foreach ($arrayPhoto as $newkey => $newValue) {
+                    // var_dump($newValue);
+                    echo "<img src='".$newValue['photo']."'alt='' srcset='' width='150em' class='imgcarte'>";
+                }
+
+                    ?>
+                    <section class="descriptionGateau">
+                        <?php echo $value["nom"]; ?>
+                        <?php echo $value["description"]; ?>
+                        
+                         
+                        <div class="tout">
+                            
+                            <div class="systeme">
+                                <img src="./IMAGE_MAQUETTE/NoPath - Copie (6).png" alt="" class="like">
+                               <span class="liksys">0</span>
+                            </div>
+                                <img src="./IMAGE_MAQUETTE/NoPath - Copie (26).png" alt="" class="commentaire" width="28px">
+                        </div>
+                    </section>
+                <?php    
+                }
+            }
+            ?>
+            </div> 
+
+
+
+
+                <!-- <div class="carte">
                     <img src="./IMAGE_MAQUETTE/imgretouche6.png" alt="" width="250px" class="imgcarte">
                     <section class="descriptionGateau">
                         <p>Description: Gâteaux sur le thème de la belle et la bête,Génoise vanille garniture confiture de fraise</p>
@@ -145,15 +184,46 @@ include './vueSndPage.php';
                                 <img src="./IMAGE_MAQUETTE/NoPath - Copie (26).png" alt="" class="commentaire" width="28px">
                         </div>
                     </section>
-                </div>
+                </div> -->
     
                 
 
             </section>
 
             <section class="espaceCarteJeuxVideo">
-    
-                <div class="carte">
+            <div class="carte">
+            <?php
+            foreach ($arrayNom as $key => $value) {
+                if ($value['categorie']==="jeux video") {
+                    // var_dump($value['id']);
+                    $prepa->execute([$value['id']]);
+                    $arrayPhoto = $prepa->fetchAll(PDO::FETCH_ASSOC);
+                foreach ($arrayPhoto as $newkey => $newValue) {
+                    // var_dump($newValue);
+                    echo "<img src='".$newValue['photo']."'alt='' srcset='' width='150em' class='imgcarte'>";
+                }
+
+                    ?>
+                    <section class="descriptionGateau">
+                        <?php echo $value["nom"]; ?>
+                        <?php echo $value["description"]; ?>
+                        
+                         
+                        <div class="tout">
+                            
+                            <div class="systeme">
+                                <img src="./IMAGE_MAQUETTE/NoPath - Copie (6).png" alt="" class="like">
+                               <span class="liksys">0</span>
+                            </div>
+                                <img src="./IMAGE_MAQUETTE/NoPath - Copie (26).png" alt="" class="commentaire" width="28px">
+                        </div>
+                    </section>
+                <?php    
+                }
+            }
+            ?>
+            </div> 
+                <!-- <div class="carte">
                     <img src="./IMAGE_MAQUETTE/imgretouche12.png" alt="" width="250px" class="imgcarte">
                     <section class="descriptionGateau">
                         <p>Description: Gâteau chocolat PAW PATROL, Génoise chocolat
@@ -169,15 +239,47 @@ include './vueSndPage.php';
                                 <img src="./IMAGE_MAQUETTE/NoPath - Copie (26).png" alt="" class="commentaire" width="28px">
                         </div>
                     </section>
-                </div>
+                </div> -->
     
                 
 
             </section>
 
             <section class="espaceCarteFilm">
-    
-                <div class="carte">
+            
+            <div class="carte">
+            <?php
+            foreach ($arrayNom as $key => $value) {
+                if ($value['categorie']==="film") {
+                    // var_dump($value['id']);
+                    $prepa->execute([$value['id']]);
+                    $arrayPhoto = $prepa->fetchAll(PDO::FETCH_ASSOC);
+                foreach ($arrayPhoto as $newkey => $newValue) {
+                    // var_dump($newValue);
+                    echo "<img src='".$newValue['photo']."'alt='' srcset='' width='150em' class='imgcarte'>";
+                }
+
+                    ?>
+                    <section class="descriptionGateau">
+                        <?php echo $value["nom"]; ?>
+                        <?php echo $value["description"]; ?>
+                        
+                         
+                        <div class="tout">
+                            
+                            <div class="systeme">
+                                <img src="./IMAGE_MAQUETTE/NoPath - Copie (6).png" alt="" class="like">
+                               <span class="liksys">0</span>
+                            </div>
+                                <img src="./IMAGE_MAQUETTE/NoPath - Copie (26).png" alt="" class="commentaire" width="28px">
+                        </div>
+                    </section>
+                <?php    
+                }
+            }
+            ?>
+            </div> 
+                <!-- <div class="carte">
                     <img src="./IMAGE_MAQUETTE/imgretouche2.png" alt="" width="250px" class="imgcarte">
                     <section class="descriptionGateau">
                         <p>Description: Gâteau thème panda, génoise vanille garniture mousseline framboise citron</p>
@@ -191,7 +293,7 @@ include './vueSndPage.php';
                                 <img src="./IMAGE_MAQUETTE/NoPath - Copie (26).png" alt="" class="commentaire" width="28px">
                         </div>
                     </section>
-                </div>
+                </div> -->
     
                
             </section>

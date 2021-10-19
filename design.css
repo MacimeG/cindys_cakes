@@ -109,6 +109,7 @@ Je Rajoute "!important" car sinon ça ne me prends pas mes propriété et je sai
         opacity: 1 !important;
         top: 12% !important;
         transition: all ease-in-out 0.8s !important;
+        display: flex;
     }
     .categorie{
         display: none;
