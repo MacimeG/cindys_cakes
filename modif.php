@@ -1,6 +1,6 @@
 <?php
+session_start();
 include './connexionDB.php';
-include './update.php';
 
 // $requetteUpdate = "UPDATE `gateau` SET `nom`=?,`description`=?,`categorie`=? WHERE id = ?"
 // $prepa = $database->prepare($requetteUpdate);
@@ -20,7 +20,8 @@ include './update.php';
                     <option value="jeux video">jeux video</option>
                     <option value="film">film</option>
                 </select>
-
+                <label for="id"></label>
+                <input type="hidden" name="id" value="<?=$_GET['id']?>">
                 <input type="submit" name="submit" value="Enregistrer" >
     </form>
 
