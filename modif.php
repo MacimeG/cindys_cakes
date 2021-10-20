@@ -6,7 +6,9 @@ include './connexionDB.php';
 // $prepa = $database->prepare($requetteUpdate);
 // $prepa->execute([$_POST['nomUpdate'], $_POST['descriptionUpdate'], $_GET['id']]);
 ?>
-    <form action="update.php" method="post">
+<link rel="stylesheet" href="modiff.css">
+<h2>modifier fichier</h2>
+    <form action="update.php" method="post" class="modif">
                 <label for="nom">Nom:</label>
                 <input type="text" name="nomUpdate" class="Nom">
 
