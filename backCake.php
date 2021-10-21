@@ -80,8 +80,8 @@ if(!isset($_SESSION['verif'])){
 
     <?php foreach ($arrayPhoto as $key => $value) { ?>
         <!-- <?php var_dump($value['video']); ?>  -->
-
-        
+        <?php
+        if ($value['video'] === NULL) {?>
 
 
             <div class="containerBack">   
@@ -97,9 +97,9 @@ if(!isset($_SESSION['verif'])){
                     // var_dump($arrayNom);
                     foreach ($arrayNom as $value => $newValue) { ?>
                     <?php
-                        // var_dump($newValue['categorie']);
-                    ?>
-                            
+                            // var_dump($newValue['categorie']);
+                        
+                            ?>
                             <u>Nom:</u> 
                             <?php echo $newValue['nom']?>
     
@@ -113,7 +113,7 @@ if(!isset($_SESSION['verif'])){
     
     
                             <?php
-                        
+                            
                         
                         
                     }
@@ -121,15 +121,15 @@ if(!isset($_SESSION['verif'])){
             </div>            
          <?php   
         }
-            
+    }  
         ?>
     </div>
 
-    <!-- <div class="containerVideo">
+     <!-- <div class="containerVideo">
         <?php foreach ($arrayNom as $newkey => $nValue) {?>
             <div class="backVideo">
             <?php
-            if ($nValue['categorie'] === NULL) {
+            if ($nValue['photo'] === NULL) {
                 foreach ($arrayPhoto as $nKey => $neValue) {?>
                     <video controls width="250px" muted src="<?php echo $neValue['video'] ?>"></video>
                     
