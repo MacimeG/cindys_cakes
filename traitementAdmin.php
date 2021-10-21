@@ -23,7 +23,7 @@ $prepa->execute(array());
 
 $array = $prepa->fetchAll(PDO::FETCH_OBJ);
 
-var_dump($array[0]->pseudo); //Pour recupéré le pseudo dans la base de données.
+var_dump(sha1($array[0]->password)); //Pour recupéré le pseudo dans la base de données.
 
 
 
@@ -36,7 +36,7 @@ if(isset($pseudo) && !empty($pseudo) && $pseudo != $array[0]->pseudo){
     
     
 }
-elseif(isset($password) && !empty($password) && $password != $array[0]->password){
+elseif(isset($password) && !empty($password) && sha1($password) != $array[0]->password){
     $_SESSION['error'] = "mettre le bon mot de passe svp";
     header('location: ./connexionCC.php');
 }

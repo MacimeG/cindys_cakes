@@ -18,7 +18,7 @@ session_start();
     <input type="text" name= "pseudo" id = "pseudo" placeholder ="pseudo">
 
     <label for="mdp"></label>
-    <input type="text" name= "mdp" id = "mdp" placeholder ="mot de passe">
+    <input type="password" name= "mdp" id = "mdp" placeholder ="mot de passe">
 
     <span><?php
 
