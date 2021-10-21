@@ -95,23 +95,24 @@ if(!isset($_SESSION['verif'])){
     
                     $arrayNom = $prep->fetchAll(PDO::FETCH_ASSOC);
                     // var_dump($arrayNom);
-                    foreach ($arrayNom as $value => $newValue) {
-                        var_dump($newValue['categorie']);
-                        ?>
-
-                        <u>Nom:</u> 
-                        <?php echo $newValue['nom']?>
-
-                        <u>Description:</u>
-                        <?php echo $newValue['description'] ?> 
-                        <!-- <input type="hidden" value="<?php$value['gateau_id']?>"> -->
-
-                        <a href="delete.php?id=<?php echo $newValue['id'];?>">supprimer</a>
-                        <a href="modif.php?id=<?php echo $newValue['id'];?>">Modifier</a>
-
-
-
-                        <?php
+                    foreach ($arrayNom as $value => $newValue) { ?>
+                    <?php
+                        // var_dump($newValue['categorie']);
+                    ?>
+                            
+                            <u>Nom:</u> 
+                            <?php echo $newValue['nom']?>
+    
+                            <u>Description:</u>
+                            <?php echo $newValue['description'] ?> 
+                            <!-- <input type="hidden" value="<?php$value['gateau_id']?>"> -->
+    
+                            <a href="delete.php?id=<?php echo $newValue['id'];?>">supprimer</a>
+                            <a href="modif.php?id=<?php echo $newValue['id'];?>">Modifier</a>
+    
+    
+    
+                            <?php
                         
                         
                         
@@ -123,6 +124,23 @@ if(!isset($_SESSION['verif'])){
             
         ?>
     </div>
+
+    <!-- <div class="containerVideo">
+        <?php foreach ($arrayNom as $newkey => $nValue) {?>
+            <div class="backVideo">
+            <?php
+            if ($nValue['categorie'] === NULL) {
+                foreach ($arrayPhoto as $nKey => $neValue) {?>
+                    <video controls width="250px" muted src="<?php echo $neValue['video'] ?>"></video>
+                    
+                    <?php    
+                }
+            }?>
+            </div>
+            <?php
+        }?>
+
+    </div> -->
 
  
 
