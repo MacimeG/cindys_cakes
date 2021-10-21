@@ -20,7 +20,8 @@ $extensionsvideo = array("video/mp4", "video/mov", "video/x-msvideo", "video/flv
 $extensionPhoto = array("image/gif", "image/jpeg", "image/png", "image/svg");
 
 if($_FILES['photo']['type'] === "" || $_POST['nomCake'] === "" ||  $_POST['descriptionCake'] == ""){
-    echo "il est vide";
+    // $_SESSION['vide'] = "il est vide";
+    header('location: ./backCake.php');
 }
 else{
 

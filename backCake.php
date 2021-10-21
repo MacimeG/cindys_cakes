@@ -69,47 +69,59 @@ if(!isset($_SESSION['verif'])){
                    if(isset($_SESSION['format'])){
                        echo $_SESSION['format'];
                    }
+                   if (isset($_SESSION['vide'])) {
+                       echo $_SESSION['vide'];
+                   }
                 ?></span>
     </form>
     <h2><u>tous les gâteaux</u></h2>
-<div class="allPicture">
+    <div class="allPicture">
     
 
     <?php foreach ($arrayPhoto as $key => $value) { ?>
-        <!-- <?php var_dump($value['gateau_id']); ?>  -->
-        <div class="containerBack">   
-                <img src="<?php echo $value['photo'] ?>"alt="" srcset="" width="150em" class="imgBack">
-                <?php
-                // $requeteGetNom = "SELECT `id`, `nom`, `description` FROM `gateau` WHERE id = ?";
-                // $prep = $database->prepare($requeteGetNom);
+        <!-- <?php var_dump($value['video']); ?>  -->
 
-                $prep->execute([$value['gateau_id']]);
+        
 
-                $arrayNom = $prep->fetchAll(PDO::FETCH_ASSOC);
-                // var_dump($arrayNom);
-                foreach ($arrayNom as $value => $newValue) {
-                    // var_dump($newValue['nom']);
-                    ?>
+
+            <div class="containerBack">   
+                    <img src="<?php echo $value['photo'] ?>"alt="" srcset="" width="150em" class="imgBack">
                     
-                        <u>Nom:</u> 
-                    <?php echo $newValue['nom']?>
-
-                    <u>Description:</u>
-                    <?php echo $newValue['description'] ?> 
-                    <!-- <input type="hidden" value="<?php$value['gateau_id']?>"> -->
-
-                    <a href="delete.php?id=<?php echo $newValue['id'];?>">supprimer</a>
-                    <a href="modif.php?id=<?php echo $newValue['id'];?>">Modifier</a>
-                
                     <?php
-                }
-                ?>
-        </div>            
-        <?php    
+                    // $requeteGetNom = "SELECT `id`, `nom`, `description` FROM `gateau` WHERE id = ?";
+                    // $prep = $database->prepare($requeteGetNom);
+    
+                    $prep->execute([$value['gateau_id']]);
+    
+                    $arrayNom = $prep->fetchAll(PDO::FETCH_ASSOC);
+                    // var_dump($arrayNom);
+                    foreach ($arrayNom as $value => $newValue) {
+                        // var_dump($newValue['nom']);
+                        ?>
+                        
+                            <u>Nom:</u> 
+                        <?php echo $newValue['nom']?>
+    
+                        <u>Description:</u>
+                        <?php echo $newValue['description'] ?> 
+                        <!-- <input type="hidden" value="<?php$value['gateau_id']?>"> -->
+    
+                        <a href="delete.php?id=<?php echo $newValue['id'];?>">supprimer</a>
+                        <a href="modif.php?id=<?php echo $newValue['id'];?>">Modifier</a>
+                    
+    
+                         
+                        <?php
+                    }
+                    ?>
+            </div>            
+         <?php   
         }
+            
         ?>
     </div>
-   
+
+ 
 
   
 

@@ -1,6 +1,6 @@
 <?php
 include './connexionDB.php';
-$requeteGetPhoto = "SELECT photo, gateau_id	 FROM multimedia";
+$requeteGetPhoto = "SELECT photo, gateau_id FROM multimedia";
 
 $prepa = $database->prepare($requeteGetPhoto);
 $prepa->execute();
@@ -8,7 +8,7 @@ $prepa->execute();
 $arrayPhoto = $prepa->fetchAll(PDO::FETCH_ASSOC);
 
 
-$requeteGetNom = "SELECT `id`, `nom`, `description` FROM `gateau` WHERE id = ?";
+$requeteGetNom = "SELECT `id`, `nom`, `description`, `categorie` FROM `gateau` WHERE id = ?";
 
  $prep = $database->prepare($requeteGetNom);
 
