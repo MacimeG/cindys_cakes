@@ -32,6 +32,7 @@ if(!isset($_SESSION['verif'])){
             <a href="index.html" class="acc">Accueil</a>
             <a href="sndpage.php">Produit</a>
             <a href="contact.php" class="contact">Contact</a>
+            <a href="deconnexion.php" class="deco">deconnexion</a>
             <!-- <p>Connexion Admin</p> -->
         </div>
     </div>
