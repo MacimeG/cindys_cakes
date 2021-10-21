@@ -96,22 +96,25 @@ if(!isset($_SESSION['verif'])){
                     $arrayNom = $prep->fetchAll(PDO::FETCH_ASSOC);
                     // var_dump($arrayNom);
                     foreach ($arrayNom as $value => $newValue) {
-                        // var_dump($newValue['nom']);
+                        var_dump($newValue['categorie']);
                         ?>
-                        
-                            <u>Nom:</u> 
+
+                        <u>Nom:</u> 
                         <?php echo $newValue['nom']?>
-    
+
                         <u>Description:</u>
                         <?php echo $newValue['description'] ?> 
                         <!-- <input type="hidden" value="<?php$value['gateau_id']?>"> -->
-    
+
                         <a href="delete.php?id=<?php echo $newValue['id'];?>">supprimer</a>
                         <a href="modif.php?id=<?php echo $newValue['id'];?>">Modifier</a>
-                    
-    
-                         
+
+
+
                         <?php
+                        
+                        
+                        
                     }
                     ?>
             </div>            

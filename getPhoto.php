@@ -1,6 +1,6 @@
 <?php
 include './connexionDB.php';
-$requeteGetPhoto = "SELECT photo, gateau_id FROM multimedia";
+$requeteGetPhoto = "SELECT photo, video, gateau_id FROM multimedia";
 
 $prepa = $database->prepare($requeteGetPhoto);
 $prepa->execute();
