@@ -95,9 +95,9 @@ if(!isset($_SESSION['verif'])){
     
                     $arrayNom = $prep->fetchAll(PDO::FETCH_ASSOC);
                     // var_dump($arrayNom);
-                    foreach ($arrayNom as $value => $newValue) { ?>
+                    foreach ($arrayNom as $nvalue => $newValue) { ?>
                     <?php
-                            // var_dump($newValue['categorie']);
+                            // var_dump($value['video']);
                         
                             ?>
                             <u>Nom:</u> 
@@ -120,6 +120,10 @@ if(!isset($_SESSION['verif'])){
                     ?>
             </div>            
          <?php   
+        }
+        elseif ($value['photo'] == NULL) {?>
+            <video controls width="250px" muted src="<?php echo $value['video'] ?>"></video>
+            <?php
         }
     }  
         ?>
