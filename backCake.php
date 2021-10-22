@@ -119,31 +119,40 @@ if(!isset($_SESSION['verif'])){
         }
         
         elseif ($value['photo'] === NULL) {?>
+        <div class="containVideo">
              <video controls width="200px" muted src="<?php echo $value['video'] ?>"></video>
-             
+            <?php
+              $prep->execute([$value['gateau_id']]);
+    
+                $arrayNom = $prep->fetchAll(PDO::FETCH_ASSOC);
+                foreach ($arrayNom as $clé => $newCle) {
+                    var_dump($newCle['id']);?>
+                    <u>Nom:</u> 
+                    <?php echo $newCle['nom']?>
+    
+                    <u>Description:</u>
+                    <?php echo $newCle['description'] ?> 
+                    <!-- <input type="hidden" value="<?php$newCle['gateau_id']?>"> -->
+    
+                    <a href="delete.php?id=<?php echo $newCle['id'];?>">supprimer</a>
+                    <a href="modif.php?id=<?php echo $newCle['id'];?>">Modifier</a>
+    
+    
+    
+                    <?php
+                }
+                ?>
+        </div>
+            <?php
            
-           <?php 
         }
     } 
         ?>
-    </div>
+</div>
 
 
 
-
-
-
-
-
-
-   
-
- <!-- <?php
- foreach($arrayNom as $valeur => $newValeur){
-     var_dump($newValeur['id']);
- }
- ?> -->
-
+        
   
 
     <footer class="leFooter">
