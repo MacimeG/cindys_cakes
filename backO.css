@@ -124,4 +124,15 @@ body{
     flex-direction: column;
     align-items: center;
 }
+.leFooter{
+    display: flex;
+    flex-direction: row;
+    margin-left: 100em;
+    align-items: center;
+}
+
+.icon1{
+    width: 2em;
+    height: 2em;
+}
 

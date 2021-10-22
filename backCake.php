@@ -96,7 +96,7 @@ if(!isset($_SESSION['verif'])){
                     foreach ($arrayNom as $nvalue => $newValue) { ?>
                     <?php
                           
-                          var_dump($newValue['id']);
+                         
                             ?>
                             <u>Nom:</u> 
                             <?php echo $newValue['nom']?>
@@ -156,8 +156,8 @@ if(!isset($_SESSION['verif'])){
   
 
     <footer class="leFooter">
-        <!-- <p> facebook: CINDY'S CAKES <br> fait par M.G</p> -->
-        <!-- <img src="./IMAGE_MAQUETTE/NoPath - Copie (2).png" alt="" class="icon1"> -->
+        <p> facebook: CINDY'S CAKES <br> fait par M.G</p>
+         <img src="./IMAGE_MAQUETTE/NoPath - Copie (2).png" alt="" class="icon1">
     </footer>
 </body>
 <script src="./gateau.js" defer></script>
