@@ -129,22 +129,7 @@ if(!isset($_SESSION['verif'])){
         ?>
     </div>
 
-     <!-- <div class="containerVideo">
-        <?php foreach ($arrayNom as $newkey => $nValue) {?>
-            <div class="backVideo">
-            <?php
-            if ($nValue['photo'] === NULL) {
-                foreach ($arrayPhoto as $nKey => $neValue) {?>
-                    <video controls width="250px" muted src="<?php echo $neValue['video'] ?>"></video>
-                    
-                    <?php    
-                }
-            }?>
-            </div>
-            <?php
-        }?>
-
-    </div> -->
+   
 
  
 
