@@ -78,8 +78,8 @@ if(!isset($_SESSION['verif'])){
     <div class="allPicture">
     
 
-    <?php foreach ($arrayPhoto as $key => $value) { ?>
-        <!-- <?php var_dump($value['video']); ?>  -->
+<?php foreach ($arrayPhoto as $key => $value) { ?>
+       
         <?php
         if ($value['video'] === NULL) {?>
 
@@ -88,8 +88,6 @@ if(!isset($_SESSION['verif'])){
                     <img src="<?php echo $value['photo'] ?>"alt="" srcset="" width="150em" class="imgBack">
                     
                     <?php
-                    // $requeteGetNom = "SELECT `id`, `nom`, `description` FROM `gateau` WHERE id = ?";
-                    // $prep = $database->prepare($requeteGetNom);
     
                     $prep->execute([$value['gateau_id']]);
     
@@ -97,8 +95,8 @@ if(!isset($_SESSION['verif'])){
                     // var_dump($arrayNom);
                     foreach ($arrayNom as $nvalue => $newValue) { ?>
                     <?php
-                            // var_dump($value['video']);
-                        
+                          
+                          var_dump($newValue['id']);
                             ?>
                             <u>Nom:</u> 
                             <?php echo $newValue['nom']?>
@@ -113,25 +111,38 @@ if(!isset($_SESSION['verif'])){
     
     
                             <?php
-                            
-                        
                         
                     }
                     ?>
             </div>            
          <?php   
         }
-        elseif ($value['photo'] == NULL) {?>
-            <video controls width="250px" muted src="<?php echo $value['video'] ?>"></video>
-            <?php
+        
+        elseif ($value['photo'] === NULL) {?>
+             <video controls width="200px" muted src="<?php echo $value['video'] ?>"></video>
+             
+           
+           <?php 
         }
-    }  
+    } 
         ?>
     </div>
 
+
+
+
+
+
+
+
+
    
 
- 
+ <!-- <?php
+ foreach($arrayNom as $valeur => $newValeur){
+     var_dump($newValeur['id']);
+ }
+ ?> -->
 
   
 
