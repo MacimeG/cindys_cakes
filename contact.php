@@ -15,7 +15,7 @@ session_start();
     <header class="navbar">
         <img src="./IMAGE_MAQUETTE/NoPath - Copie (15).png" class="mainLogo" alt="">
         <a href="index.html">Accueil</a>
-        <a href="sndpage.php">Produit</a>
+        <a href="sndpage.php" class="sndpage">Produit</a>
         <img src="./IMAGE_MAQUETTE/gateau_good_.png" alt="" class="logoNav">
         <a href="contact.php">Contact</a>
         <!-- <p class="admin">connexion admin</p> -->
