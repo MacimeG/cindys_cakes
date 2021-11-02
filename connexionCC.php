@@ -15,10 +15,10 @@ session_start();
    <h2>Connectez-vous</h2>
 <form action="./traitementAdmin.php" method="post" class="formulaire">
     <label for="pseudo"></label>
-    <input type="text" name= "pseudo" id = "pseudo" placeholder ="pseudo">
+    <input type="text" name= "pseudo" id = "pseudo" placeholder ="pseudo" class="pseudo">
 
     <label for="mdp"></label>
-    <input type="password" name= "mdp" id = "mdp" placeholder ="mot de passe">
+    <input type="password" name= "mdp" id = "mdp" placeholder ="mot de passe" class="mdp">
 
     <span><?php
 

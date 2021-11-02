@@ -20,10 +20,25 @@ body{
  }
 
  #valid{
-     width: 10em;
+     /* width: 10em;
      margin-left: 10em;
-     margin-top: 2em;
+     margin-top: 2em; */
+     border: none;
+     border-radius: 7px;
+     height: 2em;
  }
  h2{
      margin: 0;
+ }
+
+ .pseudo{
+     border-radius: 2px;
+     border: none;
+     height: 2em;
+ }
+
+ .mdp{
+        border-radius: 2px;
+     border: none; 
+     height: 2em;
  }
