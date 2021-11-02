@@ -126,7 +126,7 @@ if(!isset($_SESSION['verif'])){
     
                 $arrayNom = $prep->fetchAll(PDO::FETCH_ASSOC);
                 foreach ($arrayNom as $clé => $newCle) {
-                    var_dump($newCle['id']);?>
+                    ?>
                     <u>Nom:</u> 
                     <?php echo $newCle['nom']?>
     
