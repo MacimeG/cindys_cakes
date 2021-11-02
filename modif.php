@@ -2,9 +2,7 @@
 session_start();
 include './connexionDB.php';
 
-// $requetteUpdate = "UPDATE `gateau` SET `nom`=?,`description`=?,`categorie`=? WHERE id = ?"
-// $prepa = $database->prepare($requetteUpdate);
-// $prepa->execute([$_POST['nomUpdate'], $_POST['descriptionUpdate'], $_GET['id']]);
+
 ?>
 <link rel="stylesheet" href="modiff.css">
 <h2>modifier fichier</h2>
