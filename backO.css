@@ -136,3 +136,7 @@ body{
     height: 2em;
 }
 
+.containVideo{
+    display: flex;
+    flex-direction: column;
+}
