@@ -18,18 +18,5 @@ $arrayNom = $prep->fetchAll(PDO::FETCH_ASSOC);
 $requeteGetVideo = "SELECT  video FROM multimedia WHERE gateau_id = ?";
 
 $prepar = $database->prepare($requeteGetVideo);
-// var_dump($arrayNom);
 
-// var_dump($arrayPhoto);
-
-// foreach ($arrayNom as $key => $value) {
-//     if ($value['categorie']==="dessin animé") {
-//         // var_dump($value['id']);
-//         $prepa->execute([$value['id']]);
-//         $arrayPhoto = $prepa->fetchAll(PDO::FETCH_ASSOC);
-//         echo "<img src='".$arrayPhoto[0]['photo']."'alt='' srcset='' width='150em'>";
-//         echo $arrayNom[0]["description"];
-        
-//     }
-// }
 
