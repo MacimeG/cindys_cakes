@@ -6,7 +6,6 @@ $requeteGetPhoto = "SELECT photo FROM multimedia WHERE gateau_id = ?";
 $prepa = $database->prepare($requeteGetPhoto);
 
 
-
 $requeteGetNom = "SELECT * FROM `gateau`";
 
 $prep = $database->prepare($requeteGetNom);
@@ -15,6 +14,10 @@ $prep->execute();
 
 $arrayNom = $prep->fetchAll(PDO::FETCH_ASSOC);
 
+
+$requeteGetVideo = "SELECT  video FROM multimedia WHERE gateau_id = ?";
+
+$prepar = $database->prepare($requeteGetVideo);
 // var_dump($arrayNom);
 
 // var_dump($arrayPhoto);
@@ -29,3 +32,4 @@ $arrayNom = $prep->fetchAll(PDO::FETCH_ASSOC);
         
 //     }
 // }
+

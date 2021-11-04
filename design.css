@@ -164,7 +164,7 @@ Je Rajoute "!important" car sinon ça ne me prends pas mes propriété et je sai
         height: max-content !important;
 
     }
-    .espacevideo{
+    .espacevideo1{
         width: 75% !important;
         height: max-content !important;
     }
@@ -599,7 +599,7 @@ j'ai du séparer les 5 images en 2 groupes. puis jouer avec les flexbox pour par
 /* ICI DE TROUVE LES ESPACES VIDEOS, LES VIDEO SONT IMPORTER GRACE AU IFRAME
 MAJ: PAS DU TOUT GRACE AU IFRAME PCQ SA REND SUPER MAL ! ON LES AS DL PUIS MIS EN DURE :) */
 
-.espacevideo{
+.espacevideo1{
     border: 0px;
     border-radius: 5px;
     display: flex;
@@ -722,10 +722,10 @@ MAJ: PAS DU TOUT GRACE AU IFRAME PCQ SA REND SUPER MAL ! ON LES AS DL PUIS MIS E
     font-size: 24px;
     margin: 0;
 }
-.precedent{
+.precedent1{
     font-size: 22px;
 }
-.precedent:hover{
+.precedent1:hover{
     cursor: pointer;
 }
 .precedent2:hover{
@@ -757,7 +757,7 @@ MAJ: PAS DU TOUT GRACE AU IFRAME PCQ SA REND SUPER MAL ! ON LES AS DL PUIS MIS E
     width: 70%;
     font-size: 22px;
 }
-.autre:hover{
+.autre1:hover{
     cursor: pointer;
 }
 .autre2:hover{

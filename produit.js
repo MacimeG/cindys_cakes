@@ -97,14 +97,14 @@ catProd.addEventListener('click', function(){
 // PARTIS ESPACE VIDEO NORMALEMENT SA FONCTIONNE POUR RESPONSIVE ET DESKTOP
 
 
-const othervideo = document.querySelector('.autre')
+const othervideo = document.querySelector('.autre1')
 const othervideo2 = document.querySelector('.autre2')
 const othervideo3 = document.querySelector('.autre3')
 const othervideo4 = document.querySelector('.autre4')
 const othervideo5 = document.querySelector('.autre5')
 const othervideo6 = document.querySelector('.autre6')
 const othervideo7 = document.querySelector('.autre7')
-const precedvideo = document.querySelector('.precedent')
+const precedvideo = document.querySelector('.precedent1')
 const precedvideo2 = document.querySelector('.precedent2')
 const precedvideo3 = document.querySelector('.precedent3')
 const precedvideo4 = document.querySelector('.precedent4')
@@ -114,7 +114,7 @@ const precedvideo7 = document.querySelector('.precedent7')
 
 
 
-const video = document.querySelector('.espacevideo')
+const video = document.querySelector('.espacevideo1')
 const videotwo = document.querySelector('.espacevideo2')
 const videothree = document.querySelector('.espacevideo3')
 const videofour = document.querySelector('.espacevideo4')
@@ -122,8 +122,11 @@ const videofive = document.querySelector('.espacevideo5')
 const videosix = document.querySelector('.espacevideo6')
 const videoseven = document.querySelector('.espacevideo7')
 
-// console.log(othervideo)
-// console.log(precedvideo)
+
+
+
+console.log(othervideo)
+console.log(precedvideo)
 
 othervideo.addEventListener('click', function(){
     console.log('c bin la prochaine video')

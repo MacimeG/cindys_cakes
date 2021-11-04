@@ -16,7 +16,7 @@ include './vueSndPage.php';
     <header class="navbar">
         <img src="./IMAGE_MAQUETTE/NoPath - Copie (15).png" class="mainLogo" alt="">
         <a href="index.html">Accueil</a>
-        <a href="sndpage.html" class="sndpage">Produit</a>
+        <a href="sndpage.php" class="sndpage">Produit</a>
         <img src="./IMAGE_MAQUETTE/gateau_good_.png" alt="" class="logoNav">
         <a href="contact.php">Contact</a>
         <a href="connexionCC.php"><img src="./IMAGE_MAQUETTE/NoPath - Copie (2).png" alt="" class="iconco"></a>
@@ -26,7 +26,7 @@ include './vueSndPage.php';
     <!-- RESPONSIVE NAVBAR -->
     <div class="menuNavbar">
         <a href="index.html" class="acc">Accueil</a>
-        <a href="sndpage.html">Produit</a>
+        <a href="sndpage.php">Produit</a>
         <a href="contact.php" class="contact">Contact</a>
         <!-- <p>Connexion Admin</p> -->
     </div>
@@ -206,7 +206,7 @@ include './vueSndPage.php';
                                 <img src="./IMAGE_MAQUETTE/NoPath - Copie (6).png" alt="" class="like">
                                 <span class="liksys">0</span>
                             </div>
-                            <!-- <img src="./IMAGE_MAQUETTE/NoPath - Copie (26).png" alt="" class="commentaire" width="28px"> -->
+                           
                         </div>
                     </section>
                     
@@ -215,189 +215,59 @@ include './vueSndPage.php';
                 }
             }
             ?>
-              
-    
-               
             </section>
 
     </div>
 
-
-
-
         <div id="allvideo">
+            <?php
+            $compteur = 0;
+            $autreVideo = 0;
+            $precVideo = 0;
+            foreach ($arrayNom as $key => $value) {
+                // var_dump($value['nom']);
+                
 
-            <section class="espacevideo">
-    
-                <div class="titresection">
-                    <h1>Création Filmée </h1>
-                    <img src="./IMAGE_MAQUETTE/NoPath - Copie (9).png" alt="" width="80px">
-                </div>
-                
-                <div class="cartevideo">
-                    
-                    <video id="source" controls width="250px" muted src="./videoGateau/video/lol.mp4"></video>
-                    
-                    <section class="description">
-                        <p>Gâteau décoratif L.O.L SURPRISE ! </p>
-                        <p> Génoise chocolat, intérieur Bueno Framboise </p>
-                    </section>
-                    <section class="change">
-                        <p class="precedent">Précedent</p>
-                        <p class="autre">Autre vidéo</p>
+
+                    $prepar->execute([$value['id']]);
+                    $arrayVideo = $prepar->fetchAll(\PDO::FETCH_ASSOC);
+
+                    foreach ($arrayVideo as $newkey => $newValue) {
+                        if ($newValue['video'] != NULL) {
+                            
+                            $compteur++;
+                            $autreVideo++;
+                            $precVideo++;
+                            // var_dump($newValue['video']);
+                            
+                            echo "<section class='espacevideo$compteur'>
+                            
+                            <div class='titresection'>
+                            <h1>Création Filmée </h1>
+                            <img src='./IMAGE_MAQUETTE/NoPath - Copie (9).png' alt='' width='80px'>
+                            </div>
+
+                            <div class ='cartevideo'>
+
+                                <video id='source' controls width='250px' muted src='".$newValue['video']."'></video>
+                                <section class='description'>
+                                
+                                </section>
+                                <section class='change'>
+                                    <p class='precedent$precVideo'>Précedent</p>
+                                    <p class='autre$autreVideo'>Autre vidéo</p>
                        
-                    </section>
-                </div>
-    
-            </section>
-    
-            <section class="espacevideo2">
-    
-                <div class="titresection">
-                    <h1>Création Filmée </h1>
-                    <img src="./IMAGE_MAQUETTE/NoPath - Copie (9).png" alt="" width="80px">
-                </div>
+                                </section>
+                            </div>
+
+                            </section>";
+                        }
+                    }
                 
-                <div class="cartevideo">
-                    <video controls width="250px" muted src="./videoGateau/video/avengers.mp4"></video>
-                    <section class="description">
-                        <p>Gâteau décoratif Avengers ! </p>
-                        <p>Génoise vanille confiture de fraise </p>
-                        <p>Génoise vanille ganache nutella</p>  
-                    </section>
-                    <section class="change">
-                        <p class="precedent2">Précedent</p>
-                        <p class="autre2">Autre vidéo</p>
-                       
-                    </section>
-                </div>
-    
-            </section>
-    
-            <section class="espacevideo3">
-    
-                <div class="titresection">
-                    <h1>Création Filmée </h1>
-                    <img src="./IMAGE_MAQUETTE/NoPath - Copie (9).png" alt="" width="80px">
-                </div>
-                
-                <div class="cartevideo">
-                   
-                    <video controls width="250px" muted src="./videoGateau/video/fornite.mp4"></video>
-                    <section class="description">
-                        <p>Gâteau décoratif FORTNITE ! </p>
-                        <p>génoise vanille garni à la chantilly framboise</p>
-                    </section>
-                    <section class="change">
-                        <p class="precedent3">Précedent</p>
-                        <p class="autre3">Autre vidéo</p>
-                       
-                    </section>
-                </div>
-    
-            </section>
-    
-            <section class="espacevideo4">
-    
-                <div class="titresection">
-                    <h1>Création Filmée </h1>
-                    <img src="./IMAGE_MAQUETTE/NoPath - Copie (9).png" alt="" width="80px">
-                </div>
-                
-                <div class="cartevideo">
-                    
-                    <video controls width="250px" muted src="./videoGateau/video/gateau_princesse.mp4"></video>
-                    <section class="description">
-                        <p>Gâteau décoratif de Princesse ! </p>
-                        <p>Génoise chocolat intérieur forêt noire </p>
-                        <p>Chantilly cerise</p>
-                    </section>
-                    <section class="change">
-                        <p class="precedent4">Précedent</p>
-                        <p class="autre4">Autre vidéo</p>
-                       
-                    </section>
-                </div>
-    
-            </section>
-    
-            <section class="espacevideo5">
-    
-                <div class="titresection">
-                    <h1>Création Filmée </h1>
-                    <img src="./IMAGE_MAQUETTE/NoPath - Copie (9).png" alt="" width="80px">
-                </div>
-                
-                <div class="cartevideo">
-                    
-                    <video controls width="250px" muted src="./videoGateau/video/heineken.mp4"></video>
-                    <section class="description">
-                        <p>Gâteau décoratif Heineken !</p>
-                        <p>Génoise vanille garni chantilly fraise</p>
-                    </section>
-                    <section class="change">
-                        <p class="precedent5">Précedent</p>
-                        <p class="autre5">Autre vidéo</p>
-                       
-                    </section>
-                </div>
-    
-            </section>
-    
-            <section class="espacevideo6">
-    
-                <div class="titresection">
-                    <h1>Création Filmée </h1>
-                    <img src="./IMAGE_MAQUETTE/NoPath - Copie (9).png" alt="" width="80px">
-                </div>
-                
-                <div class="cartevideo">
-                 
-                    <video controls width="250px" muted src="./videoGateau/video/reine_des_neige.mp4"></video>
-                    <section class="description">
-                        <p>Gâteau décoratif Reines des Neiges ! </p>
-                        <p>Génoise Vanille </p>
-                        <p>Garniture chantilly fraise </p>
-                    </section>
-                    <section class="change">
-                        <p class="precedent6">Précedent</p>
-                        <p class="autre6">Autre vidéo</p>
-                       
-                    </section>
-                </div>
-    
-            </section>
-    
-            <section class="espacevideo7">
-    
-                <div class="titresection">
-                    <h1>Création Filmée </h1>
-                    <img src="./IMAGE_MAQUETTE/NoPath - Copie (9).png" alt="" width="80px">
-                </div>
-                
-                <div class="cartevideo">
-                 
-                    <video controls width="250px" muted src="./videoGateau/video/spider_man.mp4"></video>
-                    <section class="description">
-                        <p>Gâteau décoratif Spider-Man !</p>
-                        <p>Fraisier</p>
-                    </section>
-                    <section class="change">
-                        <p class="precedent7">Précedent</p>
-                        <p class="autre7">Autre vidéo</p>
-                       
-                    </section>
-                </div>
-    
-            </section>
+            }
+            ?>
+          
         </div>
-
-
-
-
-
-
-
 
         <footer class="leFooter">
                 <a href="https://www.facebook.com/Cindys-cakes-768045513577661">facebook: CINDY'S CAKES </a>
