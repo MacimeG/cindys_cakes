@@ -81,7 +81,6 @@ include './vueSndPage.php';
                                 <img src="./IMAGE_MAQUETTE/NoPath - Copie (6).png" alt="" class="like">
                                <span class="liksys">0</span>
                             </div>
-                                <!-- <img src="./IMAGE_MAQUETTE/NoPath - Copie (26).png" alt="" class="commentaire" width="28px"> -->
                         </div>
                     </section>
                     </div> 
