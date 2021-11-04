@@ -250,8 +250,11 @@ include './vueSndPage.php';
 
                                 <video id='source' controls width='250px' muted src='".$newValue['video']."'></video>
                                 <section class='description'>
+
+                                <p class ='titresection'>".$value['nom']." ".$value['description']."</p>
                                 
                                 </section>
+
                                 <section class='change'>
                                     <p class='precedent$precVideo'>Précedent</p>
                                     <p class='autre$autreVideo'>Autre vidéo</p>
