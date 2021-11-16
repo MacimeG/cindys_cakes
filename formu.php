@@ -32,7 +32,7 @@ if(isset($username) && !empty($username)){
                     $_SESSION['victoire'] = "Votre message a bien étais envoyer a $dest";
                     header('location: ./contact.php');
                 } else {
-                    echo "Échec de l'envoi de l'email...";
+                    $_SESSION['erreur'] = "Échec de l'envoi de l'email...";
                     header('location: ./contact.php');
                 }
                 
