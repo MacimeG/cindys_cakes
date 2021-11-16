@@ -38,7 +38,7 @@ if(isset($username) && !empty($username)){
                 
             }
             else{
-                $_SESSION['erreur'] = "<h2>Veuillez entrez du texte</h2>";
+                $_SESSION['erreur'] = "Veuillez entrez du texte";
                 header('location: ./contact.php');
             }
         }
