@@ -24,7 +24,7 @@ body{
      border: none; 
      margin-top: 5em;
      padding: 2em;
-     background-color: grey;
+     background-color: rgb(65, 65, 65);
      border-radius: 2%; 
      height: 30em;
      justify-content: space-around;
