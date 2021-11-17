@@ -3,7 +3,9 @@
         margin: 0 !important;
     }
     .navbar{
-        font-size: 18px !important;    
+        font-size: 18px !important;
+        margin-left: 50%;
+        width: 100% !important;    
     }
     .navbar a {
         display: none;
