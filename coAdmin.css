@@ -3,8 +3,9 @@
         background-color: blue !important;
     }
     .formulaire{
-        width: 50% !important;
-        height: 2% !important;
+        display: flex; 
+        flex-direction: column;
+        width: 30% !important;
     }
 
 }
@@ -24,7 +25,7 @@ body{
      border: none; 
      margin-top: 5em;
      padding: 2em;
-     background-color: rgb(65, 65, 65);
+     background-color: rgb(238, 65, 65);
      border-radius: 2%; 
      height: 30em;
      justify-content: space-around;
