@@ -30,5 +30,6 @@ if (isset($_SESSION['error'])) {
 
 ?></span>
     <input type="submit" name="valid" class="valid" value="Validé" id = "valid">
+</form>
 </body>
 </html>
