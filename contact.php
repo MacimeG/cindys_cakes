@@ -25,6 +25,7 @@ session_start();
         <a href="index.html">Accueil</a>
         <a href="sndpage.php">Produit</a>
         <a href="contact.php" class="contact">Contact</a>
+        <a href="connexionCC.php"><img src="./IMAGE_MAQUETTE/NoPath - Copie (2).png" alt="" class="iconco"></a>
         <!-- <p>Connexion Admin</p> -->
     </div>
 
