@@ -55,6 +55,10 @@
     .logoPetit{
         margin-left: 17px !important;
     }
+    .allPicture{
+        grid-template-columns: repeat(2, 1fr) !important;
+        grid-gap: 5px !important;
+    }
 }
 .navbar{
     background-color: #becdff;
