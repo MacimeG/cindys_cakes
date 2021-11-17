@@ -27,8 +27,8 @@ body{
      padding: 2em;
      background-color: rgb(48, 48, 48);
      border-radius: 2%; 
-     height: 30em;
-     justify-content: space-around;
+     height: 25em;
+     justify-content: space-evenly;
  }
  label{
     color: white;
