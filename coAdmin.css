@@ -1,3 +1,14 @@
+@media screen and (max-width:480px){
+    body{
+        background-color: blue !important;
+    }
+    .formulaire{
+        width: 50% !important;
+        height: 2% !important;
+    }
+
+}
+
 body{
     display: flex;
     align-items: center;
