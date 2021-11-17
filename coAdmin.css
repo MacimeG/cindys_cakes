@@ -1,11 +1,7 @@
 @media screen and (max-width:480px){
-    body{
-        background-color: blue !important;
-    }
+    
     .formulaire{
-        display: flex; 
-        flex-direction: column;
-        width: 30% !important;
+        width: 50% !important;
     }
 
 }
@@ -25,7 +21,7 @@ body{
      border: none; 
      margin-top: 5em;
      padding: 2em;
-     background-color: rgb(238, 65, 65);
+     background-color: rgb(48, 48, 48);
      border-radius: 2%; 
      height: 30em;
      justify-content: space-around;
