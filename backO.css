@@ -58,6 +58,7 @@
     .allPicture{
         grid-template-columns: repeat(2, 1fr) !important;
         grid-gap: 5px !important;
+        grid-auto-rows: minmax(100px, auto) !important;
     }
 }
 .navbar{
