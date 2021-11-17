@@ -8,7 +8,12 @@
     .navbar a {
         display: none;
     }
-    
+    .mainLogo{
+        display: block !important;
+        width: 50px !important;
+        margin-right: 85% !important;
+        
+    }
     .menuNavbar{
         /* background-color: #FEEDF3 !important; */
         background-color: #becdff !important;
@@ -41,7 +46,13 @@
         transition: all ease-in-out 0.5s;
     }
 
-    
+    .logoNav{
+        width: 80px !important;
+        left: 38% !important;
+    }
+    .logoPetit{
+        margin-left: 17px !important;
+    }
 }
 .navbar{
     background-color: #becdff;
