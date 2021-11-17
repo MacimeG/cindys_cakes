@@ -4,8 +4,7 @@
     }
     .navbar{
         font-size: 18px !important;
-        margin-left: 50%;
-        width: 100% !important;    
+        margin-left: 50%;  
     }
     .navbar a {
         display: none;
