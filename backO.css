@@ -110,15 +110,20 @@
     font-size: large;
 }
 
+@font-face {
+    font-family: "perpetua";
+    src: url("./font/Perpetua-Std_35217.ttf");
+}
 body{
     margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: "perpetua";
 }
 .allPicture{
     margin-top: 5em;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;

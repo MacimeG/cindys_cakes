@@ -11,13 +11,17 @@
     }
 
 }
-
+@font-face {
+    font-family: "perpetua";
+    src: url("./font/Perpetua-Std_35217.ttf");
+}
 body{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     background-color: rgb(255, 255, 255);
+    font-family: "perpetua";
 }
 
  .formulaire{
