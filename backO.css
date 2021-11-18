@@ -140,7 +140,7 @@ body{
 .leFooter{
     display: flex;
     flex-direction: row;
-    margin-left: 100em;
+    margin-left: 70em;
     align-items: center;
 }
 
