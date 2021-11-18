@@ -10,12 +10,6 @@ $("input[data-preview]").change(function() {
     console.log('kiki');
 });
 
-const DELETE = document.querySelector('.delete');
-
-DELETE.addEventListener('click', function(){
-	alert("êtes vous sur de vouloir supprimé cette élement?");
-})
-
 
 
 

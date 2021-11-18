@@ -162,4 +162,5 @@ if(!isset($_SESSION['verif'])){
 </body>
 <script src="./gateau.js" defer></script>
 <script src="./uploadFichier.js" defer></script>
+<script src="./sure.js" defer></script>
 </html>
