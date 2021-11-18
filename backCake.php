@@ -134,7 +134,7 @@ if(!isset($_SESSION['verif'])){
                     <?php echo $newCle['description'] ?> 
                     <!-- <input type="hidden" value="<?php$newCle['gateau_id']?>"> -->
     
-                    <a href="delete.php?id=<?php echo $newCle['id'];?>">supprimer</a>
+                    <a href="delete.php?id=<?php echo $newCle['id'];?>" class="delete">supprimer</a>
                     <a href="modif.php?id=<?php echo $newCle['id'];?>">Modifier</a>
     
     
