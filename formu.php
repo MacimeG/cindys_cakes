@@ -1,24 +1,28 @@
 <?php
 session_start();
-include './clean.php';
-$username =  cleanUp($_POST['username']);
-$name =  cleanUp($_POST['prenom']);
-$mail =  cleanUp($_POST['email']);
-$area =  cleanUp($_POST['textarea']);
+$username =  htmlspecialchars($_POST['username']);
+$name =  htmlspecialchars($_POST['prenom']);
+$mail =  htmlspecialchars($_POST['email']);
+$area =  htmlspecialchars($_POST['textarea']);
 
-
+function cleanUp($input){
+    $input = stripslashes($input);
+    $input = trim($input);
+    return $input;
+}
 
 if(isset($username) && !empty($username)){
-    
+    $username = cleanUp($username);
 
     if(isset($name) && !empty($name)){
-        
+        $name = cleanUp($name);
 
         if(isset($mail) && !empty($mail)){
-            filter_var($mail, FILTER_VALIDATE_EMAIL);
+            filter_var(cleanUp($mail, FILTER_VALIDATE_EMAIL));
            
 
             if(isset($area) && !empty($area)){
+                $area = cleanUp($area);
                 $dest = "maxime.glaneux@gmail.com";
                 $sujet = "Cindy Cakes";
                 $corp = "$area";
