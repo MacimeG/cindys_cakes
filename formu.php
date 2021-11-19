@@ -27,7 +27,7 @@ if(isset($username) && !empty($username)){
                 $sujet = "Cindy Cakes";
                 $corp = "$area";
                 $headers = "From: $mail";
-                
+                var_dump(mail($dest, $sujet, $corp, $headers));
                 if (mail($dest, $sujet, $corp, $headers)) {
                     $_SESSION['victoire'] = "Votre message a bien étais envoyer a $dest";
                     header('location: ./contact.php');
