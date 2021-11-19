@@ -1,17 +1,12 @@
 <?php
 include './connexionDB.php';
+include './clean.php';
 session_start();
 
-$pseudo = htmlspecialchars($_POST['pseudo']);
-$password = htmlspecialchars($_POST['mdp']);
+$pseudo = cleanUp($_POST['pseudo']);
+$password = cleanUp($_POST['mdp']);
 
 
-function cleanInput($input){
-    // $input = htmlspecialchars($input);
-    $input = stripslashes($input); //enleve les antislash
-    $input = trim($input); // enleve les espace supplementaire
-        return $input;
-}
 
 
 // ICI NOUS PREPARONS, DEFINISSON ET EXECUTE DES REQUETTES SQL.
@@ -30,7 +25,7 @@ var_dump(sha1($array[0]->password)); //Pour recupéré le pseudo dans la base de
 
 
 if(isset($pseudo) && !empty($pseudo) && $pseudo != $array[0]->pseudo){
-    $pseudo = cleanInput($pseudo);
+    
     $_SESSION['error'] = "rentrez un mot de passe svp";
     header('location: ./connexionCC.php');
     
