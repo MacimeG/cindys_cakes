@@ -1,33 +1,29 @@
 <?php
+include './clean.php';
 session_start();
-$username =  htmlspecialchars($_POST['username']);
-$name =  htmlspecialchars($_POST['prenom']);
-$mail =  htmlspecialchars($_POST['email']);
-$area =  htmlspecialchars($_POST['textarea']);
+$username =  cleanUp($_POST['username']);
+$name =  cleanUp($_POST['prenom']);
+$mail =  cleanUp($_POST['email']);
+$area =  cleanUp($_POST['textarea']);
 
-function cleanUp($input){
-    $input = stripslashes($input);
-    $input = trim($input);
-    return $input;
-}
+
 
 if(isset($username) && !empty($username)){
-    $username = cleanUp($username);
+   
 
     if(isset($name) && !empty($name)){
-        $name = cleanUp($name);
+       
 
         if(isset($mail) && !empty($mail)){
-            filter_var(cleanUp($mail, FILTER_VALIDATE_EMAIL));
+            filter_var($mail, FILTER_VALIDATE_EMAIL);
            
 
             if(isset($area) && !empty($area)){
-                $area = cleanUp($area);
+              
                 $dest = "maxime.glaneux@gmail.com";
                 $sujet = "Cindy Cakes";
                 $corp = "$area";
                 $headers = "From: $mail";
-                var_dump(mail($dest, $sujet, $corp, $headers));
                 if (mail($dest, $sujet, $corp, $headers)) {
                     $_SESSION['victoire'] = "Votre message a bien étais envoyer a $dest";
                     header('location: ./contact.php');
