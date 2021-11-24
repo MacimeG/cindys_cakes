@@ -31,5 +31,6 @@ if (isset($_SESSION['error'])) {
 ?></span>
     <input type="submit" name="valid" class="valid" value="Validé" id = "valid">
 </form>
+<a href="./index.html">retour</a>
 </body>
 </html>
