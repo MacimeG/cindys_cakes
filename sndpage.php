@@ -59,7 +59,9 @@ include './vueSndPage.php';
             <section class="espaceCarteSuperHero">
             
             <?php
+              
             foreach ($arrayNom as $key => $value) {
+               
                 if ($value['categorie']==="super héros") {
                     // var_dump($value['id']);
                     $prepa->execute([$value['id']]);
@@ -79,7 +81,7 @@ include './vueSndPage.php';
                         <div class="tout">
                             
                             <div class="systeme">
-                                <img src="./IMAGE_MAQUETTE/NoPath - Copie (6).png" alt="" class="like">
+                                <img src="./IMAGE_MAQUETTE/NoPath - Copie (6).png" alt="" class="like ">
                                <span class="liksys">0</span>
                             </div>
                         </div>
