@@ -207,13 +207,7 @@ console.log(jaime)
 for (let index = 0; index < jaime.length; index++) {
     const element = jaime[index];
     
-    element.addEventListener('click', function(e){
-
-        e.preventDefault()
-        const cle = Date.now()
-        localStorage.setItem(cle, element)
-       
-
+    element.addEventListener('click', function(){
         console.log(element.nextElementSibling)
         element.nextElementSibling.innerHTML++
         element.setAttribute('src', './IMAGE_MAQUETTE/NoPath.png')
@@ -225,9 +219,3 @@ for (let index = 0; index < jaime.length; index++) {
 
     })
 }
-
-mescle= Object.keys(localStorage)
-mescle.forEach(element =>{
-    localStorage.getItem(element)
-    console.log(element)
-});
