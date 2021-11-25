@@ -25,4 +25,6 @@ include './connexionDB.php';
                 <input type="hidden" name="id" value="<?=$_GET['id']?>">
                 <input type="submit" name="submit" value="Enregistrer" >
     </form>
+
+    <a href="./backCake.php">retour</a>
 </body>
