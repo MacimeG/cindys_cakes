@@ -206,7 +206,6 @@ console.log(jaime)
 // Ici je fais mon "systeme"de like. nextElementSibling et pour selectionné le prochain element suivant celui cliqué.
 for (let index = 0; index < jaime.length; index++) {
     const element = jaime[index];
-    
     element.addEventListener('click', function(){
         console.log(element.nextElementSibling)
         element.nextElementSibling.innerHTML++
