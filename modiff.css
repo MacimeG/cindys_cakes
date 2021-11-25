@@ -1,6 +1,12 @@
-.modif{
+body{
     display: flex;
     flex-direction: column;
-    width: 35%;
+    justify-content: center;
+    align-items: center;
+}
 
+.modif{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
 }

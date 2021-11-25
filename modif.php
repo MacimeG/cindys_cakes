@@ -5,6 +5,7 @@ include './connexionDB.php';
 
 ?>
 <link rel="stylesheet" href="modiff.css">
+<body>
 <h2>modifier fichier</h2>
     <form action="update.php" method="post" class="modif">
                 <label for="nom">Nom:</label>
@@ -24,4 +25,4 @@ include './connexionDB.php';
                 <input type="hidden" name="id" value="<?=$_GET['id']?>">
                 <input type="submit" name="submit" value="Enregistrer" >
     </form>
-
+</body>
