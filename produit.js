@@ -205,10 +205,14 @@ console.log(jaime)
 // je crée cet boucle, pour pouvoir fermer la navbar au clique sur un élement de la navbar 
 // Ici je fais mon "systeme"de like. nextElementSibling et pour selectionné le prochain element suivant celui cliqué.
 for (let index = 0; index < jaime.length; index++) {
-   
     const element = jaime[index];
-    element.addEventListener('click', function(){
-        
+    
+    element.addEventListener('click', function(e){
+
+        e.preventDefault()
+        const cle = Date.now()
+        localStorage.setItem(cle, element)
+       
 
         console.log(element.nextElementSibling)
         element.nextElementSibling.innerHTML++
@@ -217,6 +221,13 @@ for (let index = 0; index < jaime.length; index++) {
             element.nextElementSibling.innerHTML = 0
             element.setAttribute('src', './IMAGE_MAQUETTE/NoPath - Copie (6).png')
         }
-        console.log(element)
+
+
     })
 }
+
+mescle= Object.keys(localStorage)
+mescle.forEach(element =>{
+    localStorage.getItem(element)
+    console.log(element)
+});
